@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/download"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Churches"></activity>
+        <activity android:name=".Scheduledevents"></activity>
+        <activity android:name=".Churches" />
         <activity android:name=".Announcements" />
         <activity android:name=".Youthoutreach" />
         <activity android:name=".Youthinreach" />
@@ -26,7 +27,6 @@
         <activity android:name=".ChurchLeaders" />
         <activity android:name=".Mission" />
         <activity android:name=".History" />
-        <activity android:name=".Media" />
         <activity android:name=".UpcomingEvents" />
         <activity android:name=".LifeatEastparade" />
         <activity android:name=".QandA" />

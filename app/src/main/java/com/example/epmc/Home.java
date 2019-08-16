@@ -15,7 +15,7 @@ public class Home extends AppCompatActivity {
     Button life;
     Button ann;
     Button upcom;
-    Button med;
+    Button sched;
     Button his;
     Button visit;
     Button lead;
@@ -31,8 +31,8 @@ public class Home extends AppCompatActivity {
         con = (Button) findViewById(R.id.button7);
         qa = (Button) findViewById(R.id.button2);
         life = (Button) findViewById(R.id.button8);
-        upcom = (Button) findViewById(R.id.button9);
-        med = (Button) findViewById(R.id.button11);
+        upcom = (Button) findViewById(R.id.button11);
+        sched = (Button) findViewById(R.id.button9);
         his = (Button) findViewById(R.id.button13);
         ann = (Button) findViewById(R.id.button14);
         visit = (Button) findViewById(R.id.button5);
@@ -74,9 +74,9 @@ public class Home extends AppCompatActivity {
         Intent i = new Intent(this,UpcomingEvents.class);
         startActivity(i);
     }
-    public void btnmed(View view)
+    public void btnschedcom(View view)
     {
-        Intent i = new Intent(this,Media.class);
+        Intent i = new Intent(this,Scheduledevents.class);
         startActivity(i);
     }
     public void btnhis(View view)
