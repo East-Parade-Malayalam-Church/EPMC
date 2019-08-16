@@ -40,6 +40,8 @@ public class Contactus extends AppCompatActivity {
     {
         Uri uri = Uri.parse("tel:8025582867");
         Intent i = new Intent(Intent.ACTION_DIAL,uri);
-        startActivity(i);
+        if (i.resolveActivity(getPackageManager()) != null) {
+            startActivity(i);
+        }
     }
 }
