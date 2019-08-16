@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142257629627",
+    "firebase_url": "https://epmc-bf7de.firebaseio.com",
+    "project_id": "epmc-bf7de",
+    "storage_bucket": "epmc-bf7de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142257629627:android:3bc5071d36737cf9",
+        "android_client_info": {
+          "package_name": "com.example.epmc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142257629627-bifss9afu6a48btps0fb4taj5u6pmd99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIyCQ98qGPBFr8KxTh9MYJEv8vFYc73eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142257629627-bifss9afu6a48btps0fb4taj5u6pmd99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
