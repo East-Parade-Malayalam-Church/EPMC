@@ -34,14 +34,19 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         progressBar=(ProgressBar)findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser!=null) {
+            Intent i = new Intent(this,Home.class);
+            startActivity(i);
+            finish();
+        }
     }
-//    FirebaseUser currentUser = mAuth.getCurrentUser();
+
 
     public void btnhome(View v)
     {
         String email=emailWidget.getText().toString();
-        String password=passwordWidget.getText().toString();
-
+        final String password=passwordWidget.getText().toString();
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
             return;
@@ -51,27 +56,23 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        progressBar.setVisibility(View.VISIBLE);
+
+        mAuth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
-
-                            Intent intent = new Intent(MainActivity.this, Home.class);
-                            startActivity(intent);
+                        progressBar.setVisibility(View.GONE);
+                        if(!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this,"Login Failed",Toast.LENGTH_LONG).show();
                         }
-                        else {
-                            Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
+                        else
+                        {
+                            Intent i = new Intent(MainActivity.this,Home.class);
+                            startActivity(i);
+                            finish();
                         }
                     }
                 });
-
-
-        Intent i = new Intent(this,Home.class);
-        startActivity(i);
-        finish();
     }
 }
