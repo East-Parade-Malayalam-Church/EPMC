@@ -36,7 +36,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="The Malayalam Holy Communion service starts at 6:30 Am on Second and Fourth Sundays and at 10:15 Pm on all Sundays except the third."
+        android:text="The Malayalam Holy Communion service starts at 6:30 Am on Second and Fourth Sundays and at 10:15 am on all Sundays except the third."
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:fontFamily="monospace"

@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -20,21 +22,28 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     Button submit;
+    Button newsignup;
     EditText emailWidget,passwordWidget;
     private FirebaseAuth mAuth;
     ProgressBar progressBar;
+    String email;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         submit = (Button) findViewById(R.id.button);
         emailWidget=(EditText)findViewById(R.id.email) ;
         passwordWidget=(EditText)findViewById(R.id.password);
-        mAuth = FirebaseAuth.getInstance();
+        newsignup = (Button) findViewById(R.id.button27);
         progressBar=(ProgressBar)findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        mAuth=FirebaseAuth.getInstance();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if(currentUser!=null) {
             Intent i = new Intent(this,Home.class);
             startActivity(i);
@@ -45,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnhome(View v)
     {
-        String email=emailWidget.getText().toString();
-        final String password=passwordWidget.getText().toString();
+        email=emailWidget.getText().toString();
+        password=passwordWidget.getText().toString();
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
             return;
@@ -74,5 +83,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void btsignup(View v)
+    {
+        Intent i = new Intent(this,Signup.class);
+        startActivity(i);
     }
 }

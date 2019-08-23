@@ -6,47 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".Youthoutreach">
 
-    <TextView
-        android:id="@+id/textView85"
-        android:layout_width="192dp"
-        android:layout_height="238dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="195dp"
+        android:layout_height="209dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="These visits serve as a reminder to us of God’s manifold blessings that have been unconditionally showered on us, which we most often take for granted."
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:fontFamily="monospace"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478"
+        app:srcCompat="@drawable/outreach292c448a9acb14d19e273e2e" />
 
-    <TextView
-        android:id="@+id/textView86"
-        android:layout_width="193dp"
-        android:layout_height="161dp"
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="194dp"
+        android:layout_height="290dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="320dp"
-        android:text="We sing songs and share some snacks with these people and spend some time with them trying to understand them. "
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:fontFamily="monospace"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/textView85"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        app:srcCompat="@drawable/outreach2fb54bfeba3a71321a3c146d" />
 
     <TextView
         android:id="@+id/textView70"
@@ -88,38 +80,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.012" />
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="195dp"
-        android:layout_height="209dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478"
-        app:srcCompat="@drawable/outreach292c448a9acb14d19e273e2e" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="194dp"
-        android:layout_height="290dp"
+    <TextView
+        android:id="@+id/textView85"
+        android:layout_width="192dp"
+        android:layout_height="238dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="These visits serve as a reminder to us of God’s manifold blessings that have been unconditionally showered on us, which we most often take for granted."
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="193dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="320dp"
+        android:text="We sing songs and share some snacks with these people and spend some time with them trying to understand them. "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView85"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981"
-        app:srcCompat="@drawable/outreach2fb54bfeba3a71321a3c146d" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
