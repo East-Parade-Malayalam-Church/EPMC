@@ -2,13 +2,13 @@ package com.example.epmc;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
     Button min;
@@ -23,27 +23,25 @@ public class Home extends AppCompatActivity {
     Button his;
     Button visit;
     Button lead;
-    Button mal;
     Button fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        min = (Button) findViewById(R.id.button3);
-        abt = (Button) findViewById(R.id.button4);
-        vision = (Button) findViewById(R.id.button16);
-        con = (Button) findViewById(R.id.button7);
-        qa = (Button) findViewById(R.id.button2);
-        life = (Button) findViewById(R.id.button8);
-        upcom = (Button) findViewById(R.id.button11);
-        sched = (Button) findViewById(R.id.button9);
-        his = (Button) findViewById(R.id.button13);
-        ann = (Button) findViewById(R.id.button14);
-        visit = (Button) findViewById(R.id.button5);
-        lead = (Button) findViewById(R.id.button12);
-        mal = (Button) findViewById(R.id.button6);
-        fb = (Button) findViewById(R.id.button19);
+        min = findViewById(R.id.button3);
+        abt = findViewById(R.id.button4);
+        vision = findViewById(R.id.button16);
+        con = findViewById(R.id.button7);
+        qa = findViewById(R.id.button2);
+        life = findViewById(R.id.button8);
+        upcom = findViewById(R.id.button11);
+        sched = findViewById(R.id.button9);
+        his = findViewById(R.id.button13);
+        ann = findViewById(R.id.button14);
+        visit = findViewById(R.id.button5);
+        lead = findViewById(R.id.button12);
+        fb = findViewById(R.id.button19);
     }
     public void btnmin(View view)
     {
@@ -98,11 +96,6 @@ public class Home extends AppCompatActivity {
     public void btnlead(View view)
     {
         Intent i = new Intent(this,ChurchLeaders.class);
-        startActivity(i);
-    }
-    public void btnmal(View view)
-    {
-        Intent i = new Intent(this,CSIMalayalamChurches.class);
         startActivity(i);
     }
     public void btnann(View view)
