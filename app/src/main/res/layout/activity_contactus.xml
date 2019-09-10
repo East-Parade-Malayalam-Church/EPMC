@@ -18,7 +18,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
         android:text="Contact Us"
-        android:textColor="#B13434"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -202,7 +202,7 @@
         android:onClick="btcalloff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toEndOf="@+id/textView83"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707"
@@ -237,10 +237,10 @@
         android:onClick="btcall"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213"
+        app:layout_constraintVertical_bias="0.211"
         app:srcCompat="@drawable/ic_local_phone" />
 
     <ImageView
@@ -267,33 +267,41 @@
         android:id="@+id/imageButton23"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:onClick="btemailns"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22"
-        app:srcCompat="@drawable/email"
-        tools:layout_editor_absoluteX="320dp" />
+        app:layout_constraintVertical_bias="0.218"
+        app:srcCompat="@drawable/email" />
 
     <ImageButton
         android:id="@+id/imageButton24"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:onClick="btemaildv"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.501"
-        app:srcCompat="@drawable/email"
-        tools:layout_editor_absoluteX="320dp" />
+        app:srcCompat="@drawable/email" />
 
     <ImageButton
         android:id="@+id/imageButton25"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:onClick="btemailco"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702"
-        app:srcCompat="@drawable/email"
-        tools:layout_editor_absoluteX="320dp" />
+        app:layout_constraintVertical_bias="0.703"
+        app:srcCompat="@drawable/email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

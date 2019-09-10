@@ -26,7 +26,7 @@ public class Announcements extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
-        iv35 = findViewById(R.id.imageView35);
+        iv35 = (ImageView) findViewById(R.id.imageView35);
         registerForContextMenu(iv35);
     }
     @Override

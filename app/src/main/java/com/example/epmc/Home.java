@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class Home extends AppCompatActivity {
     Button min;
     Button abt;
@@ -24,6 +26,8 @@ public class Home extends AppCompatActivity {
     Button visit;
     Button lead;
     Button fb;
+    Button dir;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,12 @@ public class Home extends AppCompatActivity {
         visit = findViewById(R.id.button5);
         lead = findViewById(R.id.button12);
         fb = findViewById(R.id.button19);
+        dir = findViewById(R.id.button25);
+    }
+    public void btndir(View view)
+    {
+        Intent di = new Intent(this,Directory.class);
+        startActivity(di);
     }
     public void btnmin(View view)
     {

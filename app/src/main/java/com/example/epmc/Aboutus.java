@@ -28,9 +28,9 @@ public class Aboutus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
-        iv8 = findViewById(R.id.imageView8);
-        iv9 = findViewById(R.id.imageView9);
-        iv10 = findViewById(R.id.imageView10);
+        iv8 = (ImageView) findViewById(R.id.imageView8);
+        iv9 = (ImageView) findViewById(R.id.imageView9);
+        iv10 = (ImageView) findViewById(R.id.imageView10);
         registerForContextMenu(iv8);
         registerForContextMenu(iv9);
         registerForContextMenu(iv10);

@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,13 +19,20 @@ import androidx.core.app.ActivityCompat;
 
 public class QandA extends AppCompatActivity {
     ImageView iv33;
+    Button bt32;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qand);
         iv33 = findViewById(R.id.imageView33);
+        bt32 = (Button) findViewById(R.id.button32);
         registerForContextMenu(iv33);
+    }
+    public void btvu(View view)
+    {
+        Intent ivu = new Intent(this,Visitus.class);
+        startActivity(ivu);
     }
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);

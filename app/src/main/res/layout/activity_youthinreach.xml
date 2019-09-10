@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442"
+        app:layout_constraintVertical_bias="0.352"
         app:srcCompat="@drawable/img20181130wa0011" />
 
     <ImageView
@@ -25,7 +25,7 @@
         android:layout_height="163dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/inreach" />
@@ -38,7 +38,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="504dp"
+        android:layout_marginBottom="596dp"
         android:text="There are many members of the church who are bed-ridden and unable to attend the regular church worship service as well as other activities of the church. "
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -79,7 +79,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="308dp"
+        android:layout_marginBottom="400dp"
         android:text="Through the in-reach programs, we reach out to these people, go to their home and spend time with them. "
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -98,9 +98,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginRight="204dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="212dp"
+        android:layout_marginRight="212dp"
+        android:layout_marginBottom="124dp"
         android:text="We sing songs and also conduct a small worship service at their home. As part of the In-Reach program, we also conduct carol rounds at the homes of the elderly."
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -111,4 +111,5 @@
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView21"
         app:layout_constraintVertical_bias="0.097" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

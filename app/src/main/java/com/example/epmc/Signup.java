@@ -20,6 +20,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
     Button mn;
@@ -27,6 +29,9 @@ public class Signup extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     ProgressBar progressBar;
+
+    //private FirebaseDatabase mFirebaseDatabase;
+    //private DatabaseReference mMessagesDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class Signup extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_signup);
 
+        //mFirebaseDatabase =FirebaseDatabase.getInstance();
+        //mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
 
         mAuth = FirebaseAuth.getInstance();
 

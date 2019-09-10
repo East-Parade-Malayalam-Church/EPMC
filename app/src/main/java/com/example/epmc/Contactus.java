@@ -22,6 +22,9 @@ public class Contactus extends AppCompatActivity {
     private ImageButton imageCall;
     private TextView pic;
     ImageView iv32;
+    ImageButton ib23;
+    ImageButton ib24;
+    ImageButton ib25;
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
@@ -31,8 +34,50 @@ public class Contactus extends AppCompatActivity {
         setContentView(R.layout.activity_contactus);
         imageCall = findViewById(R.id.imageButton);
         pic = findViewById(R.id.textView36);
-        iv32 = findViewById(R.id.imageView32);
+        iv32 = (ImageView) findViewById(R.id.imageView32);
         registerForContextMenu(iv32);
+        ib23 = (ImageButton) findViewById(R.id.imageButton23);
+        ib24 = (ImageButton) findViewById(R.id.imageButton24);
+        ib25 = (ImageButton) findViewById(R.id.imageButton25);
+    }
+    public void btemailns(View view)
+    {
+        Intent ie1 = new Intent(Intent.ACTION_SEND);
+        ie1.setType("message/rfc822");
+        ie1.putExtra(Intent.EXTRA_EMAIL  , new String[]{"nebukulathunkal@gmail.com"});
+        ie1.putExtra(Intent.EXTRA_SUBJECT, "Insert Subject here");
+        ie1.putExtra(Intent.EXTRA_TEXT   , "Respected Nebu Achen, ");
+        try {
+            startActivity(Intent.createChooser(ie1, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(Contactus.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void btemaildv(View view)
+    {
+        Intent ie2 = new Intent(Intent.ACTION_SEND);
+        ie2.setType("message/rfc822");
+        ie2.putExtra(Intent.EXTRA_EMAIL  , new String[]{"darwinvv@gmail.com"});
+        ie2.putExtra(Intent.EXTRA_SUBJECT, "Insert Subject here");
+        ie2.putExtra(Intent.EXTRA_TEXT   , "Respected Darwin Achen, ");
+        try {
+            startActivity(Intent.createChooser(ie2, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(Contactus.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void btemailco(View view)
+    {
+        Intent ie3 = new Intent(Intent.ACTION_SEND);
+        ie3.setType("message/rfc822");
+        ie3.putExtra(Intent.EXTRA_EMAIL  , new String[]{""});
+        ie3.putExtra(Intent.EXTRA_SUBJECT, "Insert Subject here");
+        ie3.putExtra(Intent.EXTRA_TEXT   , "To whomsover it may concern at East Parade Church, ");
+        try {
+            startActivity(Intent.createChooser(ie3, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(Contactus.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,7 +115,6 @@ public class Contactus extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(items);
-
         }
     }
     @Override

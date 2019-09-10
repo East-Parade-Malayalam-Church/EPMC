@@ -34,7 +34,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView85"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/outreach2fb54bfeba3a71321a3c146d" />
 
     <TextView
@@ -86,7 +86,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="96dp"
         android:text="These visits serve as a reminder to us of God’s manifold blessings that have been unconditionally showered on us, which we most often take for granted."
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -120,14 +120,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="781dp" />
+        app:layout_constraintGuide_end="768dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline64"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="603dp" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline65"

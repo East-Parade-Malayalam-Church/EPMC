@@ -28,9 +28,9 @@ public class Choir extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choir);
-        chg = findViewById(R.id.button26);
-        iv17 = findViewById(R.id.imageView17);
-        iv18 = findViewById(R.id.imageView18);
+        chg = (Button) findViewById(R.id.button26);
+        iv17 = (ImageView) findViewById(R.id.imageView17);
+        iv18 = (ImageView) findViewById(R.id.imageView18);
         registerForContextMenu(iv17);
         registerForContextMenu(iv18);
     }

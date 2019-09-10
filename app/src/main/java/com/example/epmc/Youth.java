@@ -3,6 +3,7 @@ package com.example.epmc;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ public class Youth extends AppCompatActivity {
         outreach = findViewById(R.id.button24);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youth);
+        Toast.makeText(this,"Click on Home Button for song List",Toast.LENGTH_LONG).show();
     }
     public void btym(View view)
     {
@@ -59,17 +61,20 @@ public class Youth extends AppCompatActivity {
                 startActivity(i);
                 return true;
             case R.id.context_home:
-                Intent i2 = new Intent(getApplicationContext(), Home.class);
-                startActivity(i2);
+                Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emy-pwa.web.app/"));
+                startActivity(i3);
                 return true;
             case R.id.context_contact:
-                Intent i3 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Please grant the permission to call", Toast.LENGTH_SHORT).show();
+                Intent i4 = new Intent(Intent.ACTION_DIAL);
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+                {
+                    Toast.makeText(this,"Please grant the permission to call",Toast.LENGTH_SHORT).show();
                     requestPermission();
-                } else {
-                    startActivity(i3);
                 }
+                else {
+                    startActivity(i4);
+                }
+
                 return true;
             default:
                 return super.onOptionsItemSelected(items);

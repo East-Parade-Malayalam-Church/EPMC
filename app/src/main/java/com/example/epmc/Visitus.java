@@ -27,7 +27,6 @@ public class Visitus extends AppCompatActivity {
         vtcu = findViewById(R.id.button21);
         locn = findViewById(R.id.imageButton4);
     }
-
     public void btcu(View view) {
         Intent i = new Intent(this, Contactus.class);
         startActivity(i);
