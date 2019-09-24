@@ -10,21 +10,48 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class Sundayschool extends AppCompatActivity {
-    ImageView iv26;
+
+    Button fragment1,fragment2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sundayschool);
-        iv26 = findViewById(R.id.imageView26);
-        registerForContextMenu(iv26);
+
+        fragment1 = (Button) findViewById(R.id.button33);
+        fragment2 = (Button) findViewById(R.id.button34);
+        listener();
+    }
+    public void listener()
+    {
+        fragment1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction f1 = getSupportFragmentManager().beginTransaction();
+                BlankFragment ff1 = new BlankFragment();
+                f1.replace(R.id.fragment_container,ff1);
+                f1.commit();
+            }
+        });
+        fragment2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction f2 = getSupportFragmentManager().beginTransaction();
+                BlankFragment2 ff2 = new BlankFragment2();
+                f2.replace(R.id.fragment_container,ff2);
+                f2.commit();
+            }
+        });
     }
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);

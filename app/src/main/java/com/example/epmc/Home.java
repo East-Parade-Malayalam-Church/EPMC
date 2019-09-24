@@ -27,7 +27,7 @@ public class Home extends AppCompatActivity {
     Button lead;
     Button fb;
     Button dir;
-
+    Button cal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,12 @@ public class Home extends AppCompatActivity {
         lead = findViewById(R.id.button12);
         fb = findViewById(R.id.button19);
         dir = findViewById(R.id.button25);
+        cal = findViewById(R.id.button6);
+    }
+    public void btncal(View view)
+    {
+        Intent cali = new Intent(this,Calendar.class);
+        startActivity(cali);
     }
     public void btndir(View view)
     {

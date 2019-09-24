@@ -145,19 +145,6 @@
         app:layout_constraintVertical_bias="0.038"
         app:srcCompat="@drawable/ic_local_phone" />
 
-    <ImageView
-        android:id="@+id/imageView35"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline22"
-        app:layout_constraintVertical_bias="0.823"
-        app:srcCompat="@drawable/old2" />
-
     <TextView
         android:id="@+id/textView122"
         android:layout_width="0dp"
@@ -326,12 +313,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="249dp" />
+        app:layout_constraintGuide_end="205dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="560dp" />
+        app:layout_constraintGuide_begin="378dp" />
+
+    <Button
+        android:id="@+id/noti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify me"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline21"
+        app:layout_constraintVertical_bias="0.343" />
 </androidx.constraintlayout.widget.ConstraintLayout>

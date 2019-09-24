@@ -1,9 +1,14 @@
 package com.example.epmc;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -11,14 +16,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 
 public class Announcements extends AppCompatActivity {
-    ImageView iv35;
+    private Button noti;
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
@@ -26,8 +32,30 @@ public class Announcements extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
-        iv35 = (ImageView) findViewById(R.id.imageView35);
-        registerForContextMenu(iv35);
+        noti = (Button) findViewById(R.id.noti);
+        final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.straight);
+        final Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.drawable.diamond);
+        noti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                PendingIntent pIntent = PendingIntent.getActivity(Announcements.this,0,intent,0);
+                Notification noti = new Notification.Builder(Announcements.this)
+                        .setTicker("Ticker")
+                        .setContentTitle("Your Ola Cab has arrived. ")
+                        .setContentText("Driver Details: Jeevan Koshy")
+                        .setStyle(new Notification.BigPictureStyle().bigPicture(bitmap2))
+                        .setLargeIcon(bitmap)
+                        .setPriority(Notification.PRIORITY_DEFAULT)
+                        .setSmallIcon(R.drawable.epmcmark1300x212)
+                        .addAction(R.drawable.ic_launcher_background,"Action1",pIntent)
+                        .addAction(R.drawable.ic_launcher_background,"Action2",pIntent)
+                        .setContentIntent(pIntent).build();
+                noti.flags = Notification.FLAG_AUTO_CANCEL;
+                NotificationManager nm = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+                nm.notify(0,noti);
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,27 +93,6 @@ public class Announcements extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(items);
-
-        }
-    }
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.context_save:
-                Toast.makeText(getApplicationContext(), "Picture Saved", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_sharepic:
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("image/*");
-                Uri uri = Uri.parse("android.resource.//com..example.epmc/drawable" + R.drawable.old2);
-                i.putExtra(Intent.EXTRA_STREAM, uri);
-                startActivity(i);
-                return true;
-            case R.id.context_copy:
-                Toast.makeText(getApplicationContext(), "Copied to Clipboard", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
 
         }
     }
