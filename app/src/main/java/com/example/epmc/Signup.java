@@ -2,7 +2,7 @@ package com.example.epmc;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import java.sql.BatchUpdateException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
+import android.content.SharedPreferences;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -53,9 +53,11 @@ public class Signup extends AppCompatActivity {
         confirmpasswordWidget = (EditText) findViewById(R.id.editText4);
         nameWidget = (EditText) findViewById(R.id.editText2);
     }
-
     public void btmn(View view)
     {
+        SharedPreferences sp= this.getSharedPreferences("file1",MODE_PRIVATE);
+        final SharedPreferences.Editor edit =sp.edit();
+        final String n = nameWidget.getText().toString();
         String email=emailWidget.getText().toString().trim();
         String password=passwordWidget.getText().toString().trim();
         String confirmpassword=confirmpasswordWidget.getText().toString();
@@ -86,7 +88,7 @@ public class Signup extends AppCompatActivity {
         }
 
         if(!confirmpassword.equals(password)) {
-            Toast.makeText(getApplicationContext(),"Passowrds do not match :(",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Passwords do not match :(",Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -101,6 +103,8 @@ public class Signup extends AppCompatActivity {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
+                            edit.putString("fname",n);
+                            edit.commit();
                             Intent intent = new Intent(Signup.this, MainActivity.class);
                             startActivity(intent);
                         }

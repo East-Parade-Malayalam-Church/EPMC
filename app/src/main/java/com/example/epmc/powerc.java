@@ -13,7 +13,6 @@ public class powerc extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO: This method is called when the BroadcastReceiver is receiving
         if(intent.getAction().intern() == Intent.ACTION_POWER_CONNECTED || intent.getAction().intern() == Intent.ACTION_POWER_DISCONNECTED) {
             Notification.Builder builder = new Notification.Builder(
                     context)

@@ -2,18 +2,19 @@ package com.example.epmc;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.firestore.FirebaseFirestore;
-
 public class Home extends AppCompatActivity {
     Button min;
+    Button log;
     Button abt;
     Button vision;
     Button con;
@@ -28,6 +29,7 @@ public class Home extends AppCompatActivity {
     Button fb;
     Button dir;
     Button cal;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,21 @@ public class Home extends AppCompatActivity {
         fb = findViewById(R.id.button19);
         dir = findViewById(R.id.button25);
         cal = findViewById(R.id.button6);
+        log = (Button) findViewById(R.id.button35);
+        tv = (TextView) findViewById(R.id.textView126);
+        getdata();
+    }
+    public void leave(View v)
+    {
+        Intent lv = new Intent(this,Signup.class);
+        startActivity(lv);
+        finish();
+    }
+    public void getdata()
+    {
+        SharedPreferences sp= this.getSharedPreferences("file1",MODE_PRIVATE);
+        String s1 = sp.getString("fname","N/A");
+        tv.setText(" Hello "+s1);
     }
     public void btncal(View view)
     {
