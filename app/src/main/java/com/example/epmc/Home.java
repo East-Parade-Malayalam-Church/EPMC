@@ -50,8 +50,8 @@ public class Home extends AppCompatActivity {
         fb = findViewById(R.id.button19);
         dir = findViewById(R.id.button25);
         cal = findViewById(R.id.button6);
-        log = (Button) findViewById(R.id.button35);
-        tv = (TextView) findViewById(R.id.textView126);
+        //log = (Button) findViewById(R.id.button35);
+        tv = findViewById(R.id.textView126);
         getdata();
     }
     public void leave(View v)
@@ -64,17 +64,19 @@ public class Home extends AppCompatActivity {
     {
         SharedPreferences sp= this.getSharedPreferences("file1",MODE_PRIVATE);
         String s1 = sp.getString("fname","N/A");
-        tv.setText(" Hello "+s1);
+        //tv.setText("Welcome "+s1);
     }
     public void btncal(View view)
     {
-        Intent cali = new Intent(this,Calendar.class);
-        startActivity(cali);
+        //Intent cali = new Intent(this,Calendar.class);
+        //startActivity(cali);
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btndir(View view)
     {
-        Intent di = new Intent(this,Directory.class);
-        startActivity(di);
+        //Intent di = new Intent(this,Directory.class);
+        //startActivity(di);
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btnmin(View view)
     {
@@ -108,8 +110,9 @@ public class Home extends AppCompatActivity {
     }
     public void btnupcom(View view)
     {
-        Intent i = new Intent(this,UpcomingEvents.class);
-        startActivity(i);
+        //Intent i = new Intent(this,UpcomingEvents.class);
+        //startActivity(i);
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btnschedcom(View view)
     {
@@ -133,8 +136,9 @@ public class Home extends AppCompatActivity {
     }
     public void btnann(View view)
     {
-        Intent i = new Intent(this,Announcements.class);
-        startActivity(i);
+        //Intent i = new Intent(this,Announcements.class);
+        //startActivity(i);
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btnfb(View view)
     {

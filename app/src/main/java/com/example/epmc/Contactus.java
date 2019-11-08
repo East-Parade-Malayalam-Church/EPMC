@@ -33,12 +33,12 @@ public class Contactus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactus);
         imageCall = findViewById(R.id.imageButton);
-        pic = findViewById(R.id.textView36);
-        iv32 = (ImageView) findViewById(R.id.imageView32);
+        //pic = findViewById(R.id.textView36);
+        iv32 = findViewById(R.id.imageView32);
         registerForContextMenu(iv32);
-        ib23 = (ImageButton) findViewById(R.id.imageButton23);
-        ib24 = (ImageButton) findViewById(R.id.imageButton24);
-        ib25 = (ImageButton) findViewById(R.id.imageButton25);
+        ib23 = findViewById(R.id.imageButton23);
+        ib24 = findViewById(R.id.imageButton24);
+        ib25 = findViewById(R.id.imageButton25);
     }
     public void btemailns(View view)
     {
