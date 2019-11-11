@@ -50,7 +50,7 @@
         android:onClick="btnscf"
         android:text="Senior Christian Fellowship"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline179"
         app:layout_constraintEnd_toStartOf="@+id/guideline169"
         app:layout_constraintHorizontal_bias="0.483"

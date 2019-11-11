@@ -110,9 +110,9 @@ public class Home extends AppCompatActivity {
     }
     public void btnupcom(View view)
     {
-        //Intent i = new Intent(this,UpcomingEvents.class);
-        //startActivity(i);
-        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this,UpcomingEvents.class);
+        startActivity(i);
+        //Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btnschedcom(View view)
     {

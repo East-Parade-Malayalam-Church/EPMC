@@ -69,8 +69,8 @@
         android:gravity="center"
         android:text="You don’t need to be a great singer to join the choir at East Parade. God takes a bunch of voices—some strong and some not as strong—and blends them together to create beautiful music that honors Him."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="22sp"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -92,7 +92,7 @@
         android:text="We welcome anyone who has a wish to sing for the lord to join us. "
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -114,7 +114,7 @@
         android:text="Please contact anyone from the choir group, and they would be happy to help you out."
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -129,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0" />
+        app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline24"
@@ -158,4 +158,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.65" />
+
+    <Button
+        android:id="@+id/button26"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="btchg"
+        android:text="Goals"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

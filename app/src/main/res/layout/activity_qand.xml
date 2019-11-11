@@ -167,7 +167,7 @@
         android:onClick="btvu"
         android:text="Visit Us"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline128"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"

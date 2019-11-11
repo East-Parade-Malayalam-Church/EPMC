@@ -68,7 +68,7 @@
         android:layout_marginBottom="8dp"
         android:text="At East Parade, you will find people from all the six dioceses of CSI in Kerala, some who were born and brought up in Bangalore while some others have just moved in."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeTextType="uniform"
@@ -88,7 +88,7 @@
         android:layout_marginRight="8dp"
         android:text="East Parade is a diaspora church whose members migrated to Bangalore from Kerala over the last couple of generations. "
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeTextType="uniform"
@@ -110,7 +110,7 @@
         android:layout_marginBottom="24dp"
         android:text="The services are conducted in Malayalam, with an English service once a month."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeTextType="uniform"
@@ -132,7 +132,7 @@
         android:layout_marginBottom="8dp"
         android:text="When you come to East Parade on a weekend our aim is that you would be inspired by the music, encouraged by the message, welcomed by our amazing community of people and be reminded that God’s grace is here!"
         android:textColor="@android:color/black"
-        android:textSize="17sp"
+        android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeTextType="uniform"
@@ -148,13 +148,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Our goal at East Parade is to create environments and experiences where you can encounter God in the midst of your life."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeTextType="uniform"
@@ -170,7 +169,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.07"
+        app:layout_constraintGuide_percent="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -179,7 +178,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.25"
+        app:layout_constraintGuide_percent="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -188,7 +187,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintGuide_percent="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -197,7 +196,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.65"
+        app:layout_constraintGuide_percent="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -206,7 +205,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.81"
+        app:layout_constraintGuide_percent="0.8"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -214,22 +213,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3138686" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="234dp" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="212dp"
-        app:layout_constraintGuide_percent="0.53" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"

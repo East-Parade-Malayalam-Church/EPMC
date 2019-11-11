@@ -2,7 +2,6 @@ package com.example.epmc;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -11,12 +10,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class Sundayschool extends AppCompatActivity {
@@ -28,8 +25,8 @@ public class Sundayschool extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sundayschool);
 
-        fragment1 = (Button) findViewById(R.id.button33);
-        fragment2 = (Button) findViewById(R.id.button34);
+        fragment1 = findViewById(R.id.button33);
+        fragment2 = findViewById(R.id.button34);
         listener();
     }
     public void listener()
@@ -70,25 +67,9 @@ public class Sundayschool extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem items) {
         switch (items.getItemId()) {
-            case R.id.context_help:
-                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_logout:
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                return true;
             case R.id.context_home:
                 Intent i2 = new Intent(getApplicationContext(), Home.class);
                 startActivity(i2);
-                return true;
-            case R.id.context_contact:
-                Intent i3 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Please grant the permission to call", Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else {
-                    startActivity(i3);
-                }
                 return true;
             default:
                 return super.onOptionsItemSelected(items);

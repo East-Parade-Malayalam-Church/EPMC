@@ -2,7 +2,6 @@ package com.example.epmc;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -28,17 +27,17 @@ public class Choir extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choir);
-        //chg = (Button) findViewById(R.id.button26);
+        chg = findViewById(R.id.button26);
         iv17 = findViewById(R.id.imageView17);
         iv18 = findViewById(R.id.imageView18);
         registerForContextMenu(iv17);
         registerForContextMenu(iv18);
     }
-    /* public void btchg(View view)
+    public void btchg(View view)
     {
         Intent i = new Intent(this,Choirgoals.class);
         startActivity(i);
-    } */
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -53,30 +52,12 @@ public class Choir extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem items) {
         switch (items.getItemId()) {
-            case R.id.context_help:
-                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_logout:
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                return true;
             case R.id.context_home:
                 Intent i2 = new Intent(getApplicationContext(), Home.class);
                 startActivity(i2);
                 return true;
-            case R.id.context_contact:
-                Intent i3 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Please grant the permission to call", Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else {
-                    startActivity(i3);
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(items);
-
         }
+        return super.onOptionsItemSelected(items);
     }
     @Override
     public boolean onContextItemSelected(MenuItem item) {

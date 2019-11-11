@@ -2,7 +2,6 @@ package com.example.epmc;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,15 +17,21 @@ public class Youth extends AppCompatActivity {
     Button ym;
     Button inreach;
     Button outreach;
+    Button ycal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ym = findViewById(R.id.button23);
         inreach = findViewById(R.id.button22);
         outreach = findViewById(R.id.button24);
+        ycal = findViewById(R.id.button30);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youth);
         Toast.makeText(this,"Click on Home Button for song List",Toast.LENGTH_LONG).show();
+    }
+    public void btycal(View view)
+    {
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btym(View view)
     {
@@ -53,28 +58,9 @@ public class Youth extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem items) {
         switch (items.getItemId()) {
-            case R.id.context_help:
-                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_logout:
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                return true;
             case R.id.context_home:
                 Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emy-pwa.web.app/"));
                 startActivity(i3);
-                return true;
-            case R.id.context_contact:
-                Intent i4 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-                {
-                    Toast.makeText(this,"Please grant the permission to call",Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                }
-                else {
-                    startActivity(i4);
-                }
-
                 return true;
             default:
                 return super.onOptionsItemSelected(items);

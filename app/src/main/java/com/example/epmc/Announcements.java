@@ -6,7 +6,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -17,11 +16,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
 
 public class Announcements extends AppCompatActivity {
     private Button noti;
@@ -32,7 +30,7 @@ public class Announcements extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
-        noti = (Button) findViewById(R.id.noti);
+        noti = findViewById(R.id.noti);
         final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.straight);
         final Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.drawable.diamond);
         noti.setOnClickListener(new View.OnClickListener() {
@@ -71,25 +69,9 @@ public class Announcements extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem items) {
         switch (items.getItemId()) {
-            case R.id.context_help:
-                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_logout:
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                return true;
             case R.id.context_home:
                 Intent i2 = new Intent(getApplicationContext(), Home.class);
                 startActivity(i2);
-                return true;
-            case R.id.context_contact:
-                Intent i3 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Please grant the permission to call", Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else {
-                    startActivity(i3);
-                }
                 return true;
             default:
                 return super.onOptionsItemSelected(items);

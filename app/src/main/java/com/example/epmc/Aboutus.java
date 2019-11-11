@@ -2,7 +2,6 @@ package com.example.epmc;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -28,9 +27,9 @@ public class Aboutus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
-        iv8 = (ImageView) findViewById(R.id.imageView8);
-        iv9 = (ImageView) findViewById(R.id.imageView9);
-        iv10 = (ImageView) findViewById(R.id.imageView10);
+        iv8 = findViewById(R.id.imageView8);
+        iv9 = findViewById(R.id.imageView9);
+        iv10 = findViewById(R.id.imageView10);
         registerForContextMenu(iv8);
         registerForContextMenu(iv9);
         registerForContextMenu(iv10);
@@ -48,32 +47,13 @@ public class Aboutus extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem items) {
-        switch (items.getItemId()) {
-            case R.id.context_help:
-                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_logout:
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                return true;
-            case R.id.context_home:
-                Intent i2 = new Intent(getApplicationContext(), Home.class);
-                startActivity(i2);
-                return true;
-            case R.id.context_contact:
-                Intent i3 = new Intent(Intent.ACTION_DIAL);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Please grant the permission to call", Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else {
-                    startActivity(i3);
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(items);
-
+        if (items.getItemId() == R.id.context_home) {
+            Intent i2 = new Intent(getApplicationContext(), Home.class);
+            startActivity(i2);
         }
+        return super.onOptionsItemSelected(items);
     }
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
