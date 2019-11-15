@@ -4,13 +4,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="418dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="169dp"
         android:src="@drawable/youth" />
 
 </RelativeLayout>

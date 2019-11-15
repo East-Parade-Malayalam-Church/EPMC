@@ -27,6 +27,11 @@ public class UpcomingEvents extends AppCompatActivity {
         cv5 = findViewById(R.id.cd5);
         cv6 = findViewById(R.id.cd6);
     }
+    public void btserm(View view)
+    {
+        Intent i = new Intent(this,Sermon.class);
+        startActivity(i);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
