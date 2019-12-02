@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline34"
         app:layout_constraintVertical_bias="0.666"
-        app:srcCompat="@drawable/nebuachen" />
+        app:srcCompat="@drawable/nebuachen"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView26"
@@ -26,7 +27,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Rev. Nebu Skariah"
+        android:text="@string/tv26"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -47,7 +48,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Most Rev. Thomas K. Oommen"
+        android:text="@string/tv137"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -67,7 +68,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Rev. Dr. Prasana Kumar Samuel"
+        android:text="@string/tv27"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -88,7 +89,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Rev. Dn. Darwin V. V"
+        android:text="@string/tv141"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -115,7 +116,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/darwinachen" />
+        app:srcCompat="@drawable/darwinachen"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView27"
@@ -129,7 +131,8 @@
         app:layout_constraintStart_toStartOf="@+id/guideline35"
         app:layout_constraintTop_toTopOf="@+id/guideline34"
         app:layout_constraintVertical_bias="0.682"
-        app:srcCompat="@drawable/thomasoommen1" />
+        app:srcCompat="@drawable/thomasoommen1"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView30"
@@ -143,7 +146,8 @@
         app:layout_constraintStart_toStartOf="@+id/guideline35"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
         app:layout_constraintVertical_bias="0.448"
-        app:srcCompat="@drawable/bishopkcd" />
+        app:srcCompat="@drawable/bishopkcd"
+        android:contentDescription="@string/todo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"

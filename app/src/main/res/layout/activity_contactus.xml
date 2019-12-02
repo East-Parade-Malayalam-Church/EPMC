@@ -12,7 +12,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:autoText="true"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -33,8 +32,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:autoText="true"
-        android:text="+91 9901801555"
+        android:text="@string/tv43"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -56,8 +54,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:autoText="true"
-        android:text="+91 8971357074"
+        android:text="@string/tv81"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -79,8 +76,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autoText="true"
-        android:text="Rev. Dn. Darwin V. V"
+        android:text="@string/tv38"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:autoSizeMaxTextSize="20sp"
@@ -102,8 +98,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:autoText="true"
-        android:text="Rev. Nebu Skariah"
+        android:text="@string/tv40"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -128,7 +123,8 @@
         app:layout_constraintStart_toStartOf="@+id/v1"
         app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:layout_constraintVertical_bias="0.14"
-        app:srcCompat="@drawable/ic_local_phone" />
+        app:srcCompat="@drawable/ic_local_phone"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -142,7 +138,8 @@
         app:layout_constraintStart_toStartOf="@+id/v1"
         app:layout_constraintTop_toTopOf="@+id/guideline99"
         app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/ic_local_phone" />
+        app:srcCompat="@drawable/ic_local_phone"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -160,7 +157,8 @@
         app:layout_constraintStart_toStartOf="@+id/v1"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.446"
-        app:srcCompat="@drawable/ic_local_phone" />
+        app:srcCompat="@drawable/ic_local_phone"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView32"
@@ -173,7 +171,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline69"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/angle" />
+        app:srcCompat="@drawable/angle"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
         android:id="@+id/imageButton23"
@@ -192,7 +191,8 @@
         app:layout_constraintStart_toStartOf="@+id/v2"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.446"
-        app:srcCompat="@drawable/email" />
+        app:srcCompat="@drawable/email"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
         android:id="@+id/imageButton24"
@@ -211,7 +211,8 @@
         app:layout_constraintStart_toStartOf="@+id/v2"
         app:layout_constraintTop_toTopOf="@+id/guideline99"
         app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/email" />
+        app:srcCompat="@drawable/email"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
         android:id="@+id/imageButton25"
@@ -230,7 +231,8 @@
         app:layout_constraintStart_toStartOf="@+id/v2"
         app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:layout_constraintVertical_bias="0.14"
-        app:srcCompat="@drawable/email" />
+        app:srcCompat="@drawable/email"
+        android:contentDescription="@string/todo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v2"
@@ -343,7 +345,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
-        android:text="Presbyter-In-Charge"
+        android:text="@string/tv8"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:autoSizeMaxTextSize="24sp"
@@ -360,7 +362,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
-        android:text="Assistant-Presbyter"
+        android:text="@string/tv11"
         android:textColor="@android:color/black"
         app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="14sp"
@@ -376,7 +378,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
-        android:text="Church Office"
+        android:text="@string/tv12"
         android:textColor="@android:color/black"
         app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="14sp"
@@ -391,7 +393,7 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="8025582867"
+        android:text="@string/tv4"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="18sp"

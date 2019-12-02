@@ -23,7 +23,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.357"
-        app:srcCompat="@drawable/side" />
+        app:srcCompat="@drawable/side"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -39,7 +40,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/textView42"
-        app:srcCompat="@drawable/color" />
+        app:srcCompat="@drawable/color"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -54,7 +56,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41"
         app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/dis" />
+        app:srcCompat="@drawable/dis"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView41"
@@ -66,7 +69,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="At East Parade, you will find people from all the six dioceses of CSI in Kerala, some who were born and brought up in Bangalore while some others have just moved in."
+        android:text="@string/tv41"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
@@ -86,7 +89,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="East Parade is a diaspora church whose members migrated to Bangalore from Kerala over the last couple of generations. "
+        android:text="@string/tv24"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
@@ -108,7 +111,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="24dp"
-        android:text="The services are conducted in Malayalam, with an English service once a month."
+        android:text="@string/tv37"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
@@ -130,7 +133,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="When you come to East Parade on a weekend our aim is that you would be inspired by the music, encouraged by the message, welcomed by our amazing community of people and be reminded that God’s grace is here!"
+        android:text="@string/tv42"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"
@@ -151,7 +154,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Our goal at East Parade is to create environments and experiences where you can encounter God in the midst of your life."
+        android:text="@string/tv84"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="16sp"

@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline90"
         app:layout_constraintVertical_bias="0.013"
-        app:srcCompat="@drawable/img20181130wa0011" />
+        app:srcCompat="@drawable/img20181130wa0011"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -28,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline91"
         app:layout_constraintTop_toTopOf="@+id/guideline92"
-        app:srcCompat="@drawable/inreach" />
+        app:srcCompat="@drawable/inreach"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView68"
@@ -38,7 +40,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="There are many members of the church who are bed-ridden and unable to attend the regular church worship service as well as other activities of the church. "
+        android:text="@string/tv68"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -59,7 +61,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
-        android:text="Through the in-reach programs, we reach out to these people, go to their home and spend time with them. "
+        android:text="@string/tv87"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"
@@ -79,7 +81,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="4dp"
-        android:text="We sing songs and also conduct a small worship service at their home. As part of the In-Reach program, we also conduct carol rounds at the homes of the elderly."
+        android:text="@string/tv89"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:autoSizeMaxTextSize="20sp"

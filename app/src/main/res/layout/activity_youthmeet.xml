@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline87"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ym" />
+        app:srcCompat="@drawable/ym"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -29,7 +30,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline85"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ym2" />
+        app:srcCompat="@drawable/ym2"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView66"
@@ -39,7 +41,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="We meet every Sunday Morning at 9 AM at the church. These meetings are a time of praise and worship followed by a message by an internal or external speaker. The gists of the messages are posted on the EMY whatsapp brodcast messages."
+        android:text="@string/tv66"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:autoSizeMaxTextSize="20sp"

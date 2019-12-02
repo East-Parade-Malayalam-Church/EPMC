@@ -13,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:onClick="btcu"
-        android:text="Contact Us"
+        android:text="@string/bt21"
         app:layout_constraintBottom_toTopOf="@+id/guideline164"
         app:layout_constraintEnd_toStartOf="@+id/guideline163"
         app:layout_constraintHorizontal_bias="0.032"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="We’re so glad you’ve decided to visit us! You’ll find a list of commonly asked questions. "
+        android:text="@string/tv28"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:autoSizeMaxTextSize="24sp"
@@ -50,7 +50,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Please don’t hesitate to give us a call at any of our numbers"
+        android:text="@string/tv30"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:autoSizeMaxTextSize="24sp"
@@ -74,7 +74,8 @@
         app:layout_constraintStart_toStartOf="@+id/guideline165"
         app:layout_constraintTop_toTopOf="@+id/guideline162"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_navigation" />
+        app:srcCompat="@drawable/ic_navigation"
+        android:contentDescription="@string/todo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline160"
@@ -138,6 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline164"
-        app:srcCompat="@drawable/location" />
+        app:srcCompat="@drawable/location"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

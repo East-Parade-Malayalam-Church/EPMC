@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline31"
         app:layout_constraintVertical_bias="0.805"
-        app:srcCompat="@drawable/capture" />
+        app:srcCompat="@drawable/capture"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView132"
@@ -44,7 +45,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="b) To help children develop good singing and musicianship skills to foster the enjoyment of singing."
+        android:text="@string/tv134"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="18sp"
@@ -67,7 +68,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="a) To teach children the core of hymns and spiritual songs, which help them to learn the music of the faith and begin to trust, that God’s promises are theirs."
+        android:text="@string/tv135"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="18sp"
@@ -86,7 +87,7 @@
         android:id="@+id/textView133"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="One intangible but substantial benefit we reap from the junior Choir is that the children learn that they are part of the worship services and that realization is likely to remain with them through out their life."
+        android:text="@string/tv133"
         android:textColor="@android:color/black"
         android:textSize="14sp"
         app:autoSizeMaxTextSize="14sp"

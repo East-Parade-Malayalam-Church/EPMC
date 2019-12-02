@@ -1,13 +1,8 @@
 package com.example.epmc;
 
-import android.Manifest;
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -19,41 +14,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Announcements extends AppCompatActivity {
-    private Button noti;
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
-    }
+    private Button button_notify;
+    private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
+    private NotificationManager mNotifyManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
-        noti = findViewById(R.id.noti);
-        final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.straight);
-        final Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.drawable.diamond);
-        noti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                PendingIntent pIntent = PendingIntent.getActivity(Announcements.this,0,intent,0);
-                Notification noti = new Notification.Builder(Announcements.this)
-                        .setTicker("Ticker")
-                        .setContentTitle("Your Ola Cab has arrived. ")
-                        .setContentText("Driver Details: Jeevan Koshy")
-                        .setStyle(new Notification.BigPictureStyle().bigPicture(bitmap2))
-                        .setLargeIcon(bitmap)
-                        .setPriority(Notification.PRIORITY_DEFAULT)
-                        .setSmallIcon(R.drawable.epmcmark1300x212)
-                        .addAction(R.drawable.ic_launcher_background,"Action1",pIntent)
-                        .addAction(R.drawable.ic_launcher_background,"Action2",pIntent)
-                        .setContentIntent(pIntent).build();
-                noti.flags = Notification.FLAG_AUTO_CANCEL;
-                NotificationManager nm = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-                nm.notify(0,noti);
-            }
-        });
+        button_notify = findViewById(R.id.noti);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
