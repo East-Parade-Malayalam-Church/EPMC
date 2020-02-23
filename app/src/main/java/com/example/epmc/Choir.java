@@ -1,8 +1,6 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -10,28 +8,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Choir extends AppCompatActivity {
     Button chg;
-    ImageView iv17;
-    ImageView iv18;
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choir);
         chg = findViewById(R.id.button26);
-        iv17 = findViewById(R.id.imageView17);
-        iv18 = findViewById(R.id.imageView18);
-        registerForContextMenu(iv17);
-        registerForContextMenu(iv18);
     }
     public void btchg(View view)
     {
@@ -58,28 +44,5 @@ public class Choir extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(items);
-    }
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.context_save:
-                Toast.makeText(getApplicationContext(),"Picture Saved",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_sharepic:
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("image/*");
-                Uri uri = Uri.parse("android.resource.//com..example.epmc/drawable"+R.drawable.choir);
-                Uri uri2 = Uri.parse("android.resource.//com..example.epmc/drawable"+R.drawable.choirlogo);
-                i.putExtra(Intent.EXTRA_STREAM,uri);
-                i.putExtra(Intent.EXTRA_STREAM,uri2);
-                startActivity(i);
-                return true;
-            case R.id.context_copy:
-                Toast.makeText(getApplicationContext(),"Copied to Clipboard",Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
-
-        }
     }
 }

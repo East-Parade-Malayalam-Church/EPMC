@@ -1,6 +1,5 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,30 +10,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Contactus extends AppCompatActivity {
     private ImageButton imageCall;
-    private TextView pic;
     ImageView iv32;
     ImageButton ib23;
     ImageButton ib24;
     ImageButton ib25;
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactus);
         imageCall = findViewById(R.id.imageButton);
-        //pic = findViewById(R.id.textView36);
-        iv32 = findViewById(R.id.imageView32);
-        registerForContextMenu(iv32);
         ib23 = findViewById(R.id.imageButton23);
         ib24 = findViewById(R.id.imageButton24);
         ib25 = findViewById(R.id.imageButton25);
@@ -99,28 +89,6 @@ public class Contactus extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(items);
         }
-    }
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.context_save:
-                Toast.makeText(getApplicationContext(),"Picture Saved",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.context_sharepic:
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("image/*");
-                Uri uri = Uri.parse("android.resource.//com..example.epmc/drawable"+R.drawable.angle);
-                i.putExtra(Intent.EXTRA_STREAM,uri);
-                startActivity(i);
-                return true;
-            case R.id.context_copy:
-                Toast.makeText(getApplicationContext(),"Copied to Clipboard",Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
-
-        }
-
     }
     public void btcall(View view)
     {

@@ -1,13 +1,11 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Mission extends AppCompatActivity {
 
@@ -15,9 +13,6 @@ public class Mission extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mission);
-    }
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

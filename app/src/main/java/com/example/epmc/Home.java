@@ -112,7 +112,7 @@ public class Home extends AppCompatActivity {
     {
         Intent i = new Intent(this,UpcomingEvents.class);
         startActivity(i);
-        //Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Please wait for the sermons to load from our database!", Toast.LENGTH_LONG).show();
     }
     public void btnschedcom(View view)
     {
@@ -136,9 +136,13 @@ public class Home extends AppCompatActivity {
     }
     public void btnann(View view)
     {
-        //Intent i = new Intent(this,Announcements.class);
-        //startActivity(i);
-        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this,Announcements.class);
+        startActivity(i);
+    }
+    public void cot(View view)
+    {
+        Intent i = new Intent(this,Areaprayer.class);
+        startActivity(i);
     }
     public void btnfb(View view)
     {

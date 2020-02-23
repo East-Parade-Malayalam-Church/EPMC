@@ -12,14 +12,15 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline34"
         app:layout_constraintVertical_bias="0.666"
-        app:srcCompat="@drawable/nebuachen"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/nebuachen" />
 
     <TextView
         android:id="@+id/textView26"
@@ -110,29 +111,15 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/darwinachen"
-        android:contentDescription="@string/todo" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="@+id/guideline35"
-        app:layout_constraintTop_toTopOf="@+id/guideline34"
-        app:layout_constraintVertical_bias="0.682"
-        app:srcCompat="@drawable/thomasoommen1"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/darwinachen" />
 
     <ImageView
         android:id="@+id/imageView30"
@@ -140,14 +127,15 @@
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="@+id/guideline35"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
         app:layout_constraintVertical_bias="0.448"
-        app:srcCompat="@drawable/bishopkcd"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/bishopkcd" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"
@@ -191,6 +179,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.88" />
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline35"
+        app:layout_constraintTop_toTopOf="@+id/guideline34"
+        app:srcCompat="@drawable/moderator" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,27 +10,20 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Youth extends AppCompatActivity {
     Button ym;
     Button inreach;
     Button outreach;
-    Button ycal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ym = findViewById(R.id.button23);
         inreach = findViewById(R.id.button22);
         outreach = findViewById(R.id.button24);
-        ycal = findViewById(R.id.button30);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youth);
         Toast.makeText(this,"Click on Home Button for song List",Toast.LENGTH_LONG).show();
-    }
-    public void btycal(View view)
-    {
-        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btym(View view)
     {
@@ -47,9 +39,6 @@ public class Youth extends AppCompatActivity {
     {
         Intent i = new Intent(this,Youthoutreach.class);
         startActivity(i);
-    }
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

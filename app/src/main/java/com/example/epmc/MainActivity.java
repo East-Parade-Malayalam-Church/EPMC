@@ -1,8 +1,6 @@
 package com.example.epmc;
 
 import android.content.Intent;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -34,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        submit = (Button) findViewById(R.id.button);
-        emailWidget=(EditText)findViewById(R.id.email) ;
-        passwordWidget=(EditText)findViewById(R.id.password);
-        newsignup = (Button) findViewById(R.id.button27);
-        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        submit = findViewById(R.id.button);
+        emailWidget= findViewById(R.id.email);
+        passwordWidget= findViewById(R.id.password);
+        newsignup = findViewById(R.id.button27);
+        progressBar= findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         mAuth=FirebaseAuth.getInstance();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();

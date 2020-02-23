@@ -1,6 +1,5 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Ministries extends AppCompatActivity {
     Button ss;
@@ -29,9 +27,6 @@ public class Ministries extends AppCompatActivity {
         wf = findViewById(R.id.button19);
         scf = findViewById(R.id.button20);
         mm = findViewById(R.id.button18);
-    }
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

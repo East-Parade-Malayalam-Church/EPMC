@@ -27,52 +27,63 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:clickable="true"
-                android:onClick="btserm"
                 app:cardBackgroundColor="@color/cardview_dark_background"
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv1img1"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/elderly" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv1tt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Caring And Accepting The Elderly"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv1auth1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Viji Varghese Eapen"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv1dt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
                     android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="09/11/2019"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 
@@ -88,47 +99,59 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv2img2"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/wordofgod" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv2tt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="WORD OF GOD: Inspired to Inspire"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv2auth2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Dr. David Joy"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv2dt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="02/11/2019"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 
@@ -144,47 +167,59 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv3img3"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/teachersday2" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv3tt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Jesus The Guru: TEACHER'S DAY"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv3auth3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Nebu Skariah"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv3dt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="02/09/2018"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 
@@ -200,47 +235,59 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv4img4"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/giving" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv4tt4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Giving Without Counting The Cost"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv4auth4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Nebu Skariah"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv4dt4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="03/02/2018"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 
@@ -256,47 +303,59 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv5img5"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/fallofcreation" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv5tt5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="The FALLEN - NESS Of Creation"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv5auth5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Dr. David Joy"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv5dt5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="04/02/2018"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 
@@ -312,47 +371,59 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
+                    android:id="@+id/cv6img6"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/touch" />
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
+                    android:id="@+id/cv6tt6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="140dp"
                     android:layout_marginLeft="140dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Touching The Untouchable"
                     android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv6auth6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="65dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Rev. Nebu Skariah"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <TextView
+                    android:id="@+id/cv6dt6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="120dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="04/03/2018"
                     android:textColor="@color/cardview_light_background"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
             </androidx.cardview.widget.CardView>
 

@@ -1,6 +1,5 @@
 package com.example.epmc;
 
-import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Visitus extends AppCompatActivity {
     Button vtcu;
@@ -44,9 +42,6 @@ public class Visitus extends AppCompatActivity {
                 Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
             }
         }
-    }
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

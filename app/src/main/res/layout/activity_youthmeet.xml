@@ -44,11 +44,11 @@
         android:text="@string/tv66"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMaxTextSize="16sp"
         app:autoSizeMinTextSize="8sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
-        app:fontFamily="monospace"
+        app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline87"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline86"

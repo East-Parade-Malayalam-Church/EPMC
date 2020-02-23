@@ -129,7 +129,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="All Sundays from 9:00 Am to 10:00 Am"
+        android:fontFamily="sans-serif"
+        android:text="All Sundays from 9:00am - 10:00am"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"
@@ -151,7 +152,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Second and Third Saturdays at 3:30 Pm"
+        android:fontFamily="sans-serif"
+        android:text="2nd and 3rd Saturdays at 3:30pm"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"
@@ -173,7 +175,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Saturday Evenings at 4:00 Pm Sundays after Service"
+        android:fontFamily="sans-serif"
+        android:text="Saturday Evenings at 4:00pm Sundays after Service"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"
@@ -195,7 +198,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Second and Third Wednesdays at 10:00 Am"
+        android:fontFamily="sans-serif"
+        android:text="2nd and 3rd Wednesdays at 10:00am"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"
@@ -217,7 +221,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="All Sundays except third- 10:45 AM"
+        android:fontFamily="sans-serif"
+        android:text="All Sundays except 3rd - 10:45am"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"
@@ -313,20 +318,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline141"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline142"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
