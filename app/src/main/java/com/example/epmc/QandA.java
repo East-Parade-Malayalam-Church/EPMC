@@ -18,12 +18,6 @@ public class QandA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qand);
-        bt32 = findViewById(R.id.button32);
-    }
-    public void btvu(View view)
-    {
-        Intent ivu = new Intent(this,Visitus.class);
-        startActivity(ivu);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

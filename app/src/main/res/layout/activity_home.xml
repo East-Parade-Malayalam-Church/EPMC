@@ -41,7 +41,7 @@
         android:layout_height="0dp"
         android:onClick="btnfb"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline77"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline107"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,7 +85,7 @@
         android:fontFamily="sans-serif-black"
         android:onClick="btnmis"
         android:text="Vision and Mission"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline82"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline71"
@@ -106,6 +106,32 @@
         app:layout_constraintTop_toTopOf="@+id/guideline83" />
 
     <Button
+        android:id="@+id/button30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="btweb"
+        android:text="Church Website"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline199"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline71"
+        app:layout_constraintTop_toTopOf="@+id/guideline84" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="btncal"
+        android:text="Church Calendar"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline199"
+        app:layout_constraintEnd_toStartOf="@+id/guideline71"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline84" />
+
+    <Button
         android:id="@+id/button13"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -113,12 +139,10 @@
         android:onClick="btnhis"
         android:text="History"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline82"
+        app:layout_constraintBottom_toTopOf="@+id/guideline78"
         app:layout_constraintEnd_toStartOf="@+id/guideline71"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline81"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintTop_toTopOf="@+id/guideline77" />
 
     <Button
         android:id="@+id/button9"
@@ -144,12 +168,10 @@
         android:onClick="btnupcom"
         android:text="Sermons"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline81"
+        app:layout_constraintBottom_toTopOf="@+id/guideline82"
         app:layout_constraintEnd_toStartOf="@+id/guideline71"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline80"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintTop_toTopOf="@+id/guideline81" />
 
     <Button
         android:id="@+id/button8"
@@ -175,12 +197,10 @@
         android:onClick="btncon"
         android:text="Contact Us"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline78"
+        app:layout_constraintBottom_toTopOf="@+id/guideline79"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline71"
-        app:layout_constraintTop_toTopOf="@+id/guideline77"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline78" />
 
     <Button
         android:id="@+id/button5"
@@ -205,12 +225,10 @@
         android:onClick="btnabt"
         android:text="About Us"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline79"
+        app:layout_constraintBottom_toTopOf="@+id/guideline78"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="@+id/guideline71"
-        app:layout_constraintTop_toTopOf="@+id/guideline78"
-        app:layout_constraintVertical_bias="0.001" />
+        app:layout_constraintTop_toTopOf="@+id/guideline77" />
 
     <Button
         android:id="@+id/button3"
@@ -221,12 +239,10 @@
         android:text="Ministries"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline78"
+        app:layout_constraintBottom_toTopOf="@+id/guideline81"
         app:layout_constraintEnd_toStartOf="@+id/guideline71"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline77"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -253,8 +269,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
-        android:onClick="btncal"
-        android:text="Church Calendar"
+        android:onClick="btntimes"
+        android:text="East Parade Times"
         android:textColor="@android:color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline83"
@@ -318,7 +334,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline82"
@@ -327,7 +343,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65"
+        app:layout_constraintGuide_percent="0.62"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -335,14 +351,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.78" />
+        app:layout_constraintGuide_percent="0.72" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline199"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline107"

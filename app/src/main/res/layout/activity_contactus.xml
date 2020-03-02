@@ -79,7 +79,7 @@
         android:text="@string/tv38"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -300,7 +300,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -324,7 +324,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline100"
@@ -395,8 +395,8 @@
         android:layout_height="0dp"
         android:text="@string/tv4"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"

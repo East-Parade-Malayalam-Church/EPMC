@@ -66,10 +66,20 @@ public class Home extends AppCompatActivity {
         String s1 = sp.getString("fname","N/A");
         //tv.setText("Welcome "+s1);
     }
-    public void btncal(View view)
+    public void btweb(View v)
     {
-        //Intent cali = new Intent(this,Calendar.class);
-        //startActivity(cali);
+        Intent web = new Intent(this,Website.class);
+        startActivity(web);
+    }
+    public void btntimes(View view)
+    {
+        Intent tim = new Intent(this,Times.class);
+        startActivity(tim);
+    }
+    public void btncal(View v)
+    {
+        //Intent cal = new Intent(this,Calendar.class);
+        //startActivity(cal);
         Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btndir(View view)

@@ -7,65 +7,34 @@
     android:background="@android:color/holo_orange_light"
     tools:context=".History">
 
-        <TextView
-            android:id="@+id/textView136"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="The Onward Journey"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            app:autoSizeMaxTextSize="24sp"
-            app:autoSizeMinTextSize="10sp"
-            app:autoSizeStepGranularity="1sp"
-            app:autoSizeTextType="uniform"
-            app:layout_constraintBottom_toTopOf="@+id/guideline74"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline73"
-            app:layout_constraintVertical_bias="0.018" />
-
-        <TextView
-            android:id="@+id/textView138"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="The Beginning"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            app:autoSizeMaxTextSize="24sp"
-            app:autoSizeMinTextSize="10sp"
-            app:autoSizeStepGranularity="1sp"
-            app:autoSizeTextType="uniform"
-            app:layout_constraintBottom_toTopOf="@+id/guideline72"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="411dp"
+        android:layout_marginRight="411dp"
+        android:layout_marginBottom="731dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView139"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
             android:fontFamily="sans-serif"
-            android:text="East Parade Malayalam Pastorate is so closely associated with the Church where it is located now, that it has taken its very name from the Church. But it was neither known by that name in the beginning, nor was it associated with that Church in the first twelve years of its existence. It started as CSI Malayalam Congregation, Bangalore and had varied locations in the city, for worship services in its early years. Its humble beginning is marked by the worship service held for the first time in Malayalam in this city according to the CSI order of service, with just 14 worshippers lead by Rev. V.T.Kurian. That worship service took place not in any Church but in Haigh Memorial hall situated behind the present day Unity Buildings ."
+            android:text="Built in the year 1863, at the intersection of M.G.Road and Dickenson Road in accordance with European traditions, stands the imposing and historical structure of the Church of South India (CSI) East Parade Church.  The Church belongs to the Tamil and Malayalam Congregations of Bangalore, worshipping in a Spirit of Unity in the midst of diversity and plurality. Designed originally as a Cathedral of the Methodist (Wesleyan) Church, serving the soldiers belonging to the British regiment stationed in the Bangalore Cantonment area, today after 157 years of its existence, it continues to be a vibrant center of worship, under the control of the Karnataka Central Diocese (KCD) of the CSI. The origin of the East Parade Malayalam Pastorate can be traced to a small congregation of Malayalee Christians of Bangalore, hailing from CSI dioceses of Kerala which began with around 14 members. The church originally started their worship in Haigh Memorial Hall. Apart from the Haigh Memorial Hall, the congregation had utilized the Hudson Church also for their services in the beginning. It was however the St. Marks Cathedral that opened its doors for the Malayalam services on a regular basis for the first time in the city.  The arrangement with St. Marks Cathedral had several conditions attached to it such as:  The entire offertory received during the worship services were to be handed over to the Cathedral. Only Episcopally ordained ministers were to conduct Holy Communion Services in the Cathedral. The Congregation obtained the recognition of the local Diocese viz The Mysore Diocese of CSI on the 29 th of Oct, 1953. The congregation also obtained the services of a pastor (Rev. M.K.George) from Madhya Kerala Diocese. Till then it was Rev. V.T. Kurian who was ministering to the needs of the Congregation in addition to his own duties as a faculty member of the UTC. The arrangement with the St. Marks Cathedral was totally inadequate for a growing congregation. By 1957 the total Strength including children had reached 250. Hence the Congregation was exploring other possibilities for conducting their services. It was at that time that Dr.D.R.Sedlo Presbyter of St. Andrew’s Kirk on Cubbon Road came to the aid of Malayalam Congregation. The Malayalam Congregation could however move to the East parade Church only after complete repainting and extensive repairs were carried out to the Church furniture. This was due to the fact, that though the church was a stately building with 95 years of history behind it, it had fallen to bad days after British soldiers had withdrawn from Bangalore cantonment consequent to the granting of Independence to India in 1947. Malayalam Congregation had to incur considerable expenditure in this effort, exhausting all their reserves of over a decade of existence. Finally they had their first service in East Parade Church on 3rd September 1961. This was a combined service of both Tamil and Malayalam congregations as suggested by Bishop Sargent. Presently, the East Parade Malayalam Pastorate has, in its fold, has around 800 families with over 2250 members."
             android:textColor="@android:color/black"
-            android:textSize="14sp"
-            app:autoSizeMaxTextSize="14sp"
+            android:textSize="24sp"
+            app:autoSizeMaxTextSize="24sp"
             app:autoSizeMinTextSize="10sp"
             app:autoSizeStepGranularity="1sp"
             app:autoSizeTextType="uniform"
@@ -73,69 +42,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline72"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView140"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif"
-        android:scrollbars="vertical"
-        android:text="Apart from the Haigh Memorial Hall, the congregation had utilized the Hudson Church also for their services in the beginning. It was however the St. Marks Cathedral that opened its doors for the Malayalam services on a regular basis for the first time in the city.  The arrangement with St. Marks Cathedral had several conditions attached to it such as:  The entire offertory received during the worship services were to be handed over to the Cathedral. Only Episcopally ordained ministers were to conduct Holy Communion Services in the Cathedral. The Congregation obtained the recognition of the local Diocese viz The Mysore Diocese of CSI on the 29 th of Oct, 1953. The congregation also obtained the services of a pastor (Rev. M.K.George) from Madhya Kerala Diocese. Till then it was Rev. V.T. Kurian who was ministering to the needs of the Congregation in addition to his own duties as a faculty member of the UTC. The arrangement with the St. Marks Cathedral was totally inadequate for a growing congregation. By 1957 the total Strength including children had reached 250. Hence the Congregation was exploring other possibilities for conducting their services. It was at that time that Dr.D.R.Sedlo Presbyter of St. Andrew’s Kirk on Cubbon Road came to the aid of Malayalam Congregation. "
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="10sp"
-        app:autoSizeStepGranularity="1sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline74"
-        app:layout_constraintVertical_bias="1.0" />
+    </ScrollView>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline72"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.05" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline73"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.45" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline74"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline75"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline76"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

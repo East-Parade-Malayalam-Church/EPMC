@@ -16,8 +16,8 @@
         android:layout_marginRight="8dp"
         android:text="@string/tv29"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:autoSizeMaxTextSize="14sp"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -39,8 +39,8 @@
         android:layout_marginRight="8dp"
         android:text="@string/tv35"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:autoSizeMaxTextSize="14sp"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -61,8 +61,8 @@
         android:layout_marginRight="8dp"
         android:text="@string/tv33"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:autoSizeMaxTextSize="14sp"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="24sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline128"
+        app:layout_constraintTop_toTopOf="@+id/guideline126"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -161,21 +161,6 @@
         app:srcCompat="@drawable/side"
         android:contentDescription="@string/todo" />
 
-    <Button
-        android:id="@+id/button32"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:onClick="btvu"
-        android:text="@string/b32"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline128"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="@+id/guideline127"
-        app:layout_constraintTop_toBottomOf="@+id/textView33"
-        app:layout_constraintVertical_bias="0.0" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline124"
         android:layout_width="wrap_content"
@@ -205,20 +190,11 @@
         app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline128"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.22"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline129"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.26" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline130"
@@ -242,5 +218,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

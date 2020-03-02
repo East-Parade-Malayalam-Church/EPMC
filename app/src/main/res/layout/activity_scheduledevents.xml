@@ -153,7 +153,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="sans-serif"
-        android:text="2nd and 3rd Saturdays at 3:30pm"
+        android:text="2nd and 3rd Thursdays at 3:00pm"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:autoSizeMaxTextSize="20sp"

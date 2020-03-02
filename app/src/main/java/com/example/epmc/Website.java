@@ -8,7 +8,7 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Calendar extends AppCompatActivity {
+public class Website extends AppCompatActivity {
 
     Activity activity;
     private WebView webView;
@@ -17,13 +17,13 @@ public class Calendar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_website);
 
         activity = this;
-        progDailog = ProgressDialog.show(activity, "Loading Calendar","Please wait...", true);
+        progDailog = ProgressDialog.show(activity, "Loading Website","Please wait...", true);
         progDailog.setCancelable(false);
 
-        webView = findViewById(R.id.cwebview);
+        webView = findViewById(R.id.wwebview);
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
@@ -44,6 +44,6 @@ public class Calendar extends AppCompatActivity {
             }
         });
 
-        webView.loadUrl("");
+        webView.loadUrl("https://www.csieastparade.com/");
     }
 }

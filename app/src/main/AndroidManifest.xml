@@ -15,9 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Areaprayer"
+        <activity android:name=".Website"></activity>
+        <activity android:name=".Times" />
+        <activity
+            android:name=".Areaprayer"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Sermon"
             android:configChanges="keyboardHidden|orientation|screenSize"

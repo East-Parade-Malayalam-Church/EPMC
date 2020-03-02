@@ -6,10 +6,20 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Calendar extends AppCompatActivity {
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+public class Times extends AppCompatActivity {
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+    DatabaseReference ref=database.getReference().child("users").child("news");
     Activity activity;
     private WebView webView;
     private ProgressDialog progDailog;
@@ -17,13 +27,12 @@ public class Calendar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
-
+        setContentView(R.layout.activity_times);
         activity = this;
-        progDailog = ProgressDialog.show(activity, "Loading Calendar","Please wait...", true);
+        progDailog = ProgressDialog.show(activity, "Loading Newsletter","Please wait...", true);
         progDailog.setCancelable(false);
 
-        webView = findViewById(R.id.cwebview);
+        webView = findViewById(R.id.webview);
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
@@ -44,6 +53,17 @@ public class Calendar extends AppCompatActivity {
             }
         });
 
-        webView.loadUrl("");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String tlink = dataSnapshot.child("times").getValue().toString();
+                webView.loadUrl(tlink);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

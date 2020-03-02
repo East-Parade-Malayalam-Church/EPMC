@@ -70,18 +70,11 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.6" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <TextView
         android:id="@+id/ctp1"
@@ -95,7 +88,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
@@ -111,7 +104,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
@@ -127,7 +120,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
@@ -143,7 +136,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
@@ -159,7 +152,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline41"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
@@ -175,7 +168,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline43"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
@@ -191,7 +184,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline195"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline43" />
 
@@ -207,7 +200,7 @@
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline196"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline195" />
 
@@ -224,4 +217,100 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/h1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline17"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline18"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline19"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline20"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline43"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline41"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline195"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline43"
+        app:srcCompat="@drawable/navigation" />
+
+    <ImageButton
+        android:id="@+id/h8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline196"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline195"
+        app:srcCompat="@drawable/navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>
