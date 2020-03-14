@@ -15,7 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Website"></activity>
         <activity android:name=".Times" />
         <activity
             android:name=".Areaprayer"
@@ -145,6 +144,7 @@
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

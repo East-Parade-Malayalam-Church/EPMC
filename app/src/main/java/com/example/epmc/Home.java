@@ -68,8 +68,18 @@ public class Home extends AppCompatActivity {
     }
     public void btweb(View v)
     {
-        Intent web = new Intent(this,Website.class);
-        startActivity(web);
+        //Intent web = new Intent(this,Website.class);
+        //startActivity(web);
+        Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://www.csieastparade.com/"));
+        try {
+            startActivity(i);
+        } catch (ActivityNotFoundException ex) {
+            try {
+                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.csieastparade.com/"));
+                startActivity(unrestrictedIntent);
+            } catch (ActivityNotFoundException innerEx) {
+            }
+        }
     }
     public void btntimes(View view)
     {
