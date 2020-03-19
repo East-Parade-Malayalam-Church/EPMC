@@ -108,12 +108,10 @@
         android:text="Submit"
         android:textColor="@android:color/holo_green_light"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline59"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline58"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteY="718dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -127,8 +125,8 @@
 
     <Button
         android:id="@+id/button27"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="239dp"
+        android:layout_height="66dp"
         android:background="@android:color/transparent"
         android:fontFamily="sans-serif-black"
         android:onClick="btsignup"
@@ -136,26 +134,11 @@
         android:text="Don't have an account? Sign Up"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline56"
-        app:layout_constraintEnd_toStartOf="@+id/guideline55"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="@+id/guideline54"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline53"
-        app:layout_constraintVertical_bias="0.469" />
-
-    <Button
-        android:id="@+id/button29"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="sans-serif-black"
-        android:text="Forgot Password?"
-        android:textColor="@android:color/holo_blue_bright"
-        app:layout_constraintBottom_toTopOf="@+id/guideline57"
-        app:layout_constraintEnd_toStartOf="@+id/guideline55"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline54"
-        app:layout_constraintTop_toBottomOf="@+id/button27"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline50"
@@ -210,32 +193,6 @@
         android:layout_marginLeft="16dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="191dp"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline57"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="138dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="74dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline59"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_end="16dp"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,5 +11,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onNewToken(@NonNull String s) {
         super.onNewToken(s);
         Log.d("fmstoken",s);
+
+        storeToken(s);
+    }
+
+    private void storeToken(String token) {
+        SharedPrefManager.getInstance(getApplicationContext()).storeToken(token);
     }
 }

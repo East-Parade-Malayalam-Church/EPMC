@@ -1,54 +1,46 @@
 package com.example.epmc;
 
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class Directory extends AppCompatActivity {
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    TextView cvhead,area,homep;
-    ImageView fampic;
-
-    DatabaseReference reff=database.getReference().child("users").child("Directory").child("-M2Oau6oiiyBodmWJf9D").child("1");
+    private RecyclerView mRecyclerView;
+    private DatabaseReference reff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directory);
-        cvhead = findViewById(R.id.name);
-        area = findViewById(R.id.email);
-        homep = findViewById(R.id.uid);
-        fampic = findViewById(R.id.pic);
+        reff=FirebaseDatabase.getInstance().getReference().child("users").child("Directory").child("-M2n2S2tfi-nBiIDaW7k");
+        reff.keepSynced(true);
 
-        reff.addValueEventListener(new ValueEventListener() {
+        mRecyclerView = findViewById(R.id.myrecyclerview);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<Dirglob,ViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Dirglob, ViewHolder>
+                (Dirglob.class,R.layout.dir_row,ViewHolder.class,reff) {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String name = dataSnapshot.child("Name").getValue().toString();
-                cvhead.setText(name);
-                String pg = dataSnapshot.child("Area").getValue().toString();
-                area.setText(pg);
-                String hparish = dataSnapshot.child("Home Parish").getValue().toString();
-                homep.setText(hparish);
-                String famimage = dataSnapshot.child("Picture").getValue().toString();
-                Glide.with(getApplicationContext()).load(famimage).into(fampic);
+            protected void populateViewHolder(ViewHolder viewHolder, Dirglob dirglob, int i) {
+                viewHolder.setName(dirglob.getName());
+                viewHolder.setHparish(dirglob.getHparish());
+                viewHolder.setArea(dirglob.getArea());
+                viewHolder.setPicture(dirglob.getPicture());
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        };
+        mRecyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 }

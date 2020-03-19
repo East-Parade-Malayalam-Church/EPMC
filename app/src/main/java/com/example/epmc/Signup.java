@@ -46,10 +46,10 @@ public class Signup extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar2);
         mn = findViewById(R.id.button28);
-        emailWidget = findViewById(R.id.editText5);
-        passwordWidget = findViewById(R.id.editText3);
-        confirmpasswordWidget = findViewById(R.id.editText4);
-        nameWidget = findViewById(R.id.editText2);
+       // emailWidget = findViewById(R.id.editText5);
+        //passwordWidget = findViewById(R.id.editText3);
+        //confirmpasswordWidget = findViewById(R.id.editText4);
+        //nameWidget = findViewById(R.id.editText2);
     }
     public void btmn(View view)
     {

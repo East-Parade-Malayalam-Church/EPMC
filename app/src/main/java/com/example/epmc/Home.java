@@ -94,9 +94,9 @@ public class Home extends AppCompatActivity {
     }
     public void btndir(View view)
     {
-        //Intent di = new Intent(this,Directory.class);
-        //startActivity(di);
-        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+        Intent di = new Intent(this,Directory.class);
+        startActivity(di);
+        //Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
     public void btnmin(View view)
     {
