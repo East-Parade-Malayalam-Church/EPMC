@@ -2,32 +2,23 @@ package com.example.epmc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     Button submit;
-    Button newsignup;
-    EditText emailWidget,passwordWidget;
+    EditText number;
     private FirebaseAuth mAuth;
     ProgressBar progressBar;
-    String email;
-    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +27,8 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        submit = findViewById(R.id.button);
-        emailWidget= findViewById(R.id.email);
-        passwordWidget= findViewById(R.id.password);
-        newsignup = findViewById(R.id.button27);
+        submit = findViewById(R.id.submit);
+        number = findViewById(R.id.num);
         progressBar= findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         mAuth=FirebaseAuth.getInstance();
@@ -50,42 +39,31 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
-    public void btnhome(View v)
-    {
-        email=emailWidget.getText().toString();
-        password=passwordWidget.getText().toString();
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Please enter password!", Toast.LENGTH_LONG).show();
-            return;
-        }
 
-        progressBar.setVisibility(View.VISIBLE);
-
-        mAuth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.GONE);
-                        if(!task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this,"Login Failed",Toast.LENGTH_LONG).show();
-                        }
-                        else
-                        {
-                            Intent i = new Intent(MainActivity.this,Home.class);
-                            startActivity(i);
-                            finish();
-                        }
-                    }
-                });
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser()!=null)
+        {
+            Intent intent = new Intent(this,Home.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
     }
 
-    public void btsignup(View v)
+    public void btnhome(View v)
     {
+        String numb = number.getText().toString();
+        if(numb.isEmpty() || numb.length()<10)
+        {
+            number.setError("Please Enter Valid Number...");
+            number.requestFocus();
+            return;
+        }
+        String phnumber = "+91"+numb;
         Intent i = new Intent(this,Signup.class);
+        i.putExtra("phonenumber",phnumber);
         startActivity(i);
+        progressBar.setVisibility(View.VISIBLE);
     }
 }

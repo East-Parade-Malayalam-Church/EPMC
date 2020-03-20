@@ -12,9 +12,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Home extends AppCompatActivity {
     Button min;
-    Button log;
     Button abt;
     Button vision;
     Button con;
@@ -50,15 +51,15 @@ public class Home extends AppCompatActivity {
         fb = findViewById(R.id.button19);
         dir = findViewById(R.id.button25);
         cal = findViewById(R.id.button6);
-        //log = (Button) findViewById(R.id.button35);
         tv = findViewById(R.id.textView126);
         getdata();
     }
     public void leave(View v)
     {
-        Intent lv = new Intent(this,Signup.class);
+        FirebaseAuth.getInstance().signOut();
+        Intent lv = new Intent(this,MainActivity.class);
+        lv.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(lv);
-        finish();
     }
     public void getdata()
     {
