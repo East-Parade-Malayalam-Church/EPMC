@@ -1,8 +1,10 @@
 package com.example.epmc;
 
+import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +12,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
     Button min;
@@ -30,7 +40,12 @@ public class Home extends AppCompatActivity {
     Button fb;
     Button dir;
     Button cal;
+    private static final int REQUEST_CALL = 1;
     TextView tv;
+    Button tele;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference reff=database.getReference().child("users");
+    String num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +67,14 @@ public class Home extends AppCompatActivity {
         dir = findViewById(R.id.button25);
         cal = findViewById(R.id.button6);
         tv = findViewById(R.id.textView126);
+        tele = findViewById(R.id.button);
         getdata();
+        tele.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makePhoneCall();
+            }
+        });
     }
     public void leave(View v)
     {
@@ -95,7 +117,7 @@ public class Home extends AppCompatActivity {
     }
     public void btndir(View view)
     {
-        Intent di = new Intent(this,Directory.class);
+        Intent di = new Intent(this,MainActivity.class);
         startActivity(di);
         //Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
     }
@@ -177,6 +199,40 @@ public class Home extends AppCompatActivity {
                 startActivity(unrestrictedIntent);
             } catch (ActivityNotFoundException innerEx) {
                 Toast.makeText(this, "Please install Facebook", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+    public void makePhoneCall()
+    {
+        if (ContextCompat.checkSelfPermission(Home.this, Manifest.permission.CALL_PHONE)
+        != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(Home.this,
+                    new String [] {Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        } else {
+            reff.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                   num = dataSnapshot.child("teleprayer").getValue().toString();
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+            Uri uri = Uri.parse("tel:"+num);
+            Toast.makeText(this,"Tele - Prayers happen at 10:15am on all days except Sunday",
+                    Toast.LENGTH_LONG).show();
+            startActivity(new Intent(Intent.ACTION_CALL,uri));
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_CALL) {
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+               makePhoneCall();
+            }
+            else {
+                Toast.makeText(this, "Permission Denied",Toast.LENGTH_SHORT).show();
             }
         }
     }

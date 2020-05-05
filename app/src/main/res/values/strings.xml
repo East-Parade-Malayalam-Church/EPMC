@@ -3,7 +3,7 @@
     <string name="tv41">At East Parade, you will find people from all the six dioceses of CSI in Kerala, some who were born and brought up in Bangalore while some others have just moved in.</string>
     <string name="tv24">East Parade is a diaspora church whose members migrated to Bangalore from Kerala over the last couple of generations.</string>
     <string name="tv37">The services are conducted in Malayalam, with an English service once a month.</string>
-    <string name="tv42">When you come to East Parade on a weekend our aim is that you would be inspired by the worship, encouraged by the sermon, welcomed by our amazing community of people and be reminded that God’s grace is here!</string>
+    <string name="tv42">When you come to East Parade on a weekend our aim is that you would be inspired by the sermon, encouraged by the worship, welcomed by our amazing community of people and be reminded that God’s grace is here!</string>
     <string name="tv84">Our goal at East Parade is to create environments and experiences where you can encounter God in the midst of your life.</string>
     <string name="todo">TODO</string>
     <string name="tv123">The choir meets for practice every Sunday after the worship service. Vocal training involves rigorous breathing and tonal lessons and exercises. It is the synergy of this training and blessing from above that equips the singers and fine tune their voices to render pieces that an ordinary choir would not normally attempt. The East Parade Chorale has, to its credit, a handful of Concerts in addition to Christmas Carol Services which is an annual event.</string>
@@ -85,4 +85,5 @@
     <string name="tv70">We have outreach programs once or twice each month. We visit orphanages, hospitals, old age homes, etc. as part of our outreach mission and try to spread a little bit of joy and cheer amongst the people who are normally deprived of the same.</string>
     <string name="tv85">These visits serve as a reminder to us of God’s manifold blessings that have been unconditionally showered on us, which we most often take for granted.</string>
     <string name="tv86">We sing songs and share some snacks with these people and spend some time with them trying to understand them.</string>
+    <string name="title_activity_visitus">Map</string>
 </resources>

@@ -2,141 +2,164 @@ package com.example.epmc;
 
 public class Dirglob {
 
+    private static Dirglob instance;
     // Global variables
-    private String FID,Name,DOB,Address,Area,Relation,Wedding,Cell,Bgroup,Hparish,Fname,Profession,Email,Picture;
+    private String name,dob,address,area,relation,wedding,bgroup,hparish,fname,profession,email,picture;
+    private long cell;
+    private int fid;
+
+    public Dirglob(int fid, String name, String dob, String address, String area, String relation, String wedding, long cell, String bgroup,
+                   String hparish, String fname, String profession, String email, String picture) {
+        this.fid = fid;
+        this.name = name;
+        this.dob = dob;
+        this.address = address;
+        this.area = area;
+        this.relation = relation;
+        this.wedding = wedding;
+        this.cell = cell;
+        this.bgroup = bgroup;
+        this.hparish = hparish;
+        this.fname = fname;
+        this.profession = profession;
+        this.email = email;
+        this.picture = picture;
+    }
 
     public Dirglob()
-    {
+    { }
 
+    public static synchronized Dirglob getInstance() {
+        if(instance==null) {
+            instance = new Dirglob();
+        }
+        return instance;
     }
 
-    public Dirglob(String FID, String Name, String DOB, String Address, String Area, String Relation, String Wedding, String Cell, String Bgroup,
-                   String Hparish, String Fname, String Profession, String Email,String Picture) {
-        this.Address = Address;
-        this.Area = Area;
-        this.Bgroup = Bgroup;
-        this.Cell = Cell;
-        this.DOB = DOB;
-        this.Email = Email;
-        this.FID = FID;
-        this.Fname = Fname;
-        this.Name = Name;
-        this.Hparish = Hparish;
-        this.Profession = Profession;
-        this.Wedding = Wedding;
-        this.Relation = Relation;
-        this.Picture = Picture;
+    public void setData(int fid,String name,String address,String wedding,long cell,String bgroup,String hparish,String fname,
+                        String profession,String email,String picture){
+        this.fid=fid;
+        this.name=name;
+        this.address=address;
+        this.wedding=wedding;
+        this.cell=cell;
+        this.bgroup=bgroup;
+        this.hparish=hparish;
+        this.fname=fname;
+        this.profession=profession;
+        this.email=email;
+        this.picture=picture;
     }
 
-    public String getFID() {
-        return FID;
+    public int getFid() {
+        return fid;
     }
 
-    public void setFID(String FID) {
-        this.FID = FID;
+    public void setFid(int fid) {
+        this.fid = fid;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    public String getDOB() {
-        return DOB;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getArea() {
-        return Area;
+        return area;
     }
 
     public void setArea(String area) {
-        Area = area;
+        this.area = area;
     }
 
     public String getRelation() {
-        return Relation;
+        return relation;
     }
 
     public void setRelation(String relation) {
-        Relation = relation;
+        this.relation = relation;
     }
 
     public String getWedding() {
-        return Wedding;
+        return wedding;
     }
 
     public void setWedding(String wedding) {
-        Wedding = wedding;
+        this.wedding = wedding;
     }
 
-    public String getCell() {
-        return Cell;
+    public long getCell() {
+        return cell;
     }
 
-    public void setCell(String cell) {
-        Cell = cell;
+    public void setCell(long cell) {
+        this.cell = cell;
     }
 
     public String getBgroup() {
-        return Bgroup;
+        return bgroup;
     }
 
     public void setBgroup(String bgroup) {
-        Bgroup = bgroup;
+        this.bgroup = bgroup;
     }
 
     public String getHparish() {
-        return Hparish;
+        return hparish;
     }
 
     public void setHparish(String hparish) {
-        Hparish = hparish;
+        this.hparish = hparish;
     }
 
     public String getFname() {
-        return Fname;
+        return fname;
     }
 
     public void setFname(String fname) {
-        Fname = fname;
+        this.fname = fname;
     }
 
     public String getProfession() {
-        return Profession;
+        return profession;
     }
 
     public void setProfession(String profession) {
-        Profession = profession;
+        this.profession = profession;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPicture() {
-        return Picture;
+        return picture;
     }
 
     public void setPicture(String picture) {
-        Picture = picture;
+        this.picture = picture;
     }
 }

@@ -27,10 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 public class UpcomingEvents extends AppCompatActivity {
 
     ProgressDialog progressBar;
-    private int progressBarStatus = 0;
-
     private Handler progressBarHandler = new Handler();
-    private long sermonSize = 0;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     CardView cv1,cv2,cv3,cv4,cv5,cv6;
@@ -387,7 +384,6 @@ public class UpcomingEvents extends AppCompatActivity {
         progressBar.setIndeterminate(true);
         progressBar.setProgress(0);
         progressBar.show();
-
         final int totalProgressTime = 100;
         final Thread t = new Thread() {
             @Override

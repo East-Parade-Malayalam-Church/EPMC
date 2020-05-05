@@ -1,62 +1,74 @@
 package com.example.epmc;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
-public class Visitus extends AppCompatActivity {
-    Button vtcu;
-    ImageButton locn;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class Visitus extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visitus);
-        vtcu = findViewById(R.id.button21);
-        locn = findViewById(R.id.imageButton4);
-    }
-    public void btcu(View view) {
-        Intent i = new Intent(this, Contactus.class);
-        startActivity(i);
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
-    public void btloc(View view) {
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://goo.gl/maps/eUP8m24Vcjnze2bM8"));
-        intent.setPackage("com.google.android.apps.maps");
-        try {
-            startActivity(intent);
-        } catch (ActivityNotFoundException ex) {
-            try {
-                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://goo.gl/maps/eUP8m24Vcjnze2bM8"));
-                startActivity(unrestrictedIntent);
-            } catch (ActivityNotFoundException innerEx) {
-                Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(MenuItem items) {
-        switch (items.getItemId()) {
-            case R.id.context_home:
-                Intent i2 = new Intent(getApplicationContext(), Home.class);
-                startActivity(i2);
-                return true;
-            default:
-                return super.onOptionsItemSelected(items);
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        try {
+            // Customise the styling of the base map using a JSON object defined
+            // in a raw resource file.
+            boolean success = googleMap.setMapStyle(
+                    MapStyleOptions.loadRawResourceStyle(
+                            this, R.raw.retromapstyle));
+
+            if (!success) {
+                Log.e("EPMCMaps", "Style parsing failed.");
+            }
+        } catch (Resources.NotFoundException e) {
+            Log.e("EPMCMaps", "Can't find style. Error: ", e);
         }
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(12.9740607, 77.6145278);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("EPMC"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        setPoiClick(mMap);
+    }
+    private void setPoiClick(final GoogleMap map) {
+        map.setOnPoiClickListener(poi -> {
+            Marker poiMarker = mMap.addMarker(new MarkerOptions()
+                    .position(poi.latLng)
+                    .title(poi.name));
+            poiMarker.showInfoWindow();
+        });
     }
 }
-

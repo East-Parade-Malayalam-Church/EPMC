@@ -20,9 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Sermon extends AppCompatActivity {
 
-
     boolean playing = false;
-    private int forwardTime = 5000; private int backwardTime = 5000;
+    private int forwardTime = 5000;
+    private int backwardTime = 5000;
     TextView done, rem;
     private Handler myHandler = new Handler();
     public static int oneTimeOnly = 0;
