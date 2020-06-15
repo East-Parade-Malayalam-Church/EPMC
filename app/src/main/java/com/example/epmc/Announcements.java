@@ -1,13 +1,17 @@
 package com.example.epmc;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Announcements extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    TextView at1,at2,at3,at4,at5,at6;
+    TextView at1,at2,at,at4,at5,at6,at7,at8;
+    ImageButton bslinkbt;
 
     DatabaseReference reff1=database.getReference().child("users").child("news").child("weekly");
 
@@ -30,10 +35,13 @@ public class Announcements extends AppCompatActivity {
         setContentView(R.layout.activity_announcements);
         at1 = findViewById(R.id.at1);
         at2 = findViewById(R.id.at2);
-        at3 = findViewById(R.id.at3);
+        at = findViewById(R.id.at);
         at4 = findViewById(R.id.at4);
         at5 = findViewById(R.id.at5);
         at6 = findViewById(R.id.at6);
+        at7 = findViewById(R.id.at7);
+        at8 = findViewById(R.id.at8);
+        bslinkbt = findViewById(R.id.bslinkbt);
 
         reff1.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,12 +52,36 @@ public class Announcements extends AppCompatActivity {
                 String ss = dataSnapshot.child("ss").getValue().toString();
                 String youth = dataSnapshot.child("youth").getValue().toString();
                 String choir = dataSnapshot.child("choir").getValue().toString();
+                String gen1 = dataSnapshot.child("angen").getValue().toString();
+                String gen2 = dataSnapshot.child("angen2").getValue().toString();
+                String bslink = dataSnapshot.child("bslink").getValue().toString();
                 at1.setText(classes);
                 at2.setText(fast);
-                at3.setText(service);
+                at.setText(service);
                 at4.setText(ss);
                 at5.setText(youth);
                 at6.setText(choir);
+                at7.setText(gen1);
+                at8.setText(gen2);
+                bslinkbt.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(bslink));
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
+                        try {
+                            startActivity(intent);
+                        } catch (ActivityNotFoundException ex) {
+                            try {
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(bslink));
+                                startActivity(unrestrictedIntent);
+                            } catch (ActivityNotFoundException innerEx) {
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
+                            }
+                        }
+                    }
+                });
             }
 
             @Override

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Areaprayer extends AppCompatActivity {
-    TextView ctp1,ctp2,ctp3,ctp4,ctp5,ctp6,ctp7,ctp8;
-    ImageButton ibh1,ibh2,ibh3,ibh4,ibh5,ibh6,ibh7,ibh8;
+    TextView ctp1,ctp2,ctp3,ctp4,ctp5,ctp6,ctp7,ctp8,ctp9,ctp10;
+    ImageButton ibh1,ibh2,ibh3,ibh4,ibh5,ibh6,ibh7,ibh8,ibh9,ibh10;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     DatabaseReference reff1=database.getReference().child("users").child("news").child("prayer").child("1");
@@ -30,11 +31,14 @@ public class Areaprayer extends AppCompatActivity {
     DatabaseReference reff6=database.getReference().child("users").child("news").child("prayer").child("6");
     DatabaseReference reff7=database.getReference().child("users").child("news").child("prayer").child("7");
     DatabaseReference reff8=database.getReference().child("users").child("news").child("prayer").child("8");
+    DatabaseReference reff9=database.getReference().child("users").child("news").child("prayer").child("9");
+    DatabaseReference reff10=database.getReference().child("users").child("news").child("prayer").child("10");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_areaprayer);
+        ctp10 = findViewById(R.id.ctp);
         ctp1 = findViewById(R.id.ctp1);
         ctp2 = findViewById(R.id.ctp2);
         ctp3 = findViewById(R.id.ctp3);
@@ -43,6 +47,8 @@ public class Areaprayer extends AppCompatActivity {
         ctp6 = findViewById(R.id.ctp6);
         ctp7 = findViewById(R.id.ctp7);
         ctp8 = findViewById(R.id.ctp8);
+        ctp9 = findViewById(R.id.ctp9);
+        ibh10 = findViewById(R.id.h);
         ibh1 = findViewById(R.id.h1);
         ibh2 = findViewById(R.id.h2);
         ibh3 = findViewById(R.id.h3);
@@ -51,26 +57,29 @@ public class Areaprayer extends AppCompatActivity {
         ibh6 = findViewById(R.id.h6);
         ibh7 = findViewById(R.id.h7);
         ibh8 = findViewById(R.id.h8);
+        ibh9 = findViewById(R.id.h9);
 
         reff1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String details = dataSnapshot.child("details").getValue().toString();
-                final String house = dataSnapshot.child("house").getValue().toString();
+                final String link = dataSnapshot.child("house").getValue().toString();
                 ctp1.setText(details);
                 ibh1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(link));
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
                             try {
-                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link.... Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -92,7 +101,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -100,7 +109,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link.... Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -122,7 +133,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -130,7 +141,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link.... Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -152,7 +165,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -160,7 +173,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link.... Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -182,7 +197,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -190,7 +205,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -212,7 +229,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -220,7 +237,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -242,7 +261,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -250,7 +269,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -272,7 +293,7 @@ public class Areaprayer extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(house));
-                        intent.setPackage("com.google.android.apps.maps");
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
                         try {
                             startActivity(intent);
                         } catch (ActivityNotFoundException ex) {
@@ -280,7 +301,9 @@ public class Areaprayer extends AppCompatActivity {
                                 Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(house));
                                 startActivity(unrestrictedIntent);
                             } catch (ActivityNotFoundException innerEx) {
-                                //Toast.makeText(this, "Please install a maps application", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
                             }
                         }
                     }
@@ -289,6 +312,70 @@ public class Areaprayer extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+        reff9.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String details = dataSnapshot.child("details").getValue().toString();
+                final String link = dataSnapshot.child("house").getValue().toString();
+                ctp9.setText(details);
+                ibh9.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(link));
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
+                        try {
+                            startActivity(intent);
+                        } catch (ActivityNotFoundException ex) {
+                            try {
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                startActivity(unrestrictedIntent);
+                            } catch (ActivityNotFoundException innerEx) {
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
+                            }
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        reff10.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String details = dataSnapshot.child("details").getValue().toString();
+                final String link = dataSnapshot.child("house").getValue().toString();
+                ctp10.setText(details);
+                ibh10.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(link));
+                        intent.setPackage("us.zoom.videomeetings&hl=en");
+                        try {
+                            startActivity(intent);
+                        } catch (ActivityNotFoundException ex) {
+                            try {
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                startActivity(unrestrictedIntent);
+                            } catch (ActivityNotFoundException innerEx) {
+                                Toast.makeText(getApplicationContext(),"Waiting for Link....Please make sure you have downloaded the app",Toast.LENGTH_LONG).show();
+                                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=us.zoom.videomeetings"));
+                                startActivity(unrestrictedIntent);
+                            }
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

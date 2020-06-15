@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D57B98"
+    android:background="#FEDBD0"
     tools:context=".WomensFellowship">
 
     <ImageView
@@ -13,14 +13,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/guideline150"
         app:layout_constraintEnd_toStartOf="@+id/guideline149"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline147"
         app:layout_constraintVertical_bias="0.694"
-        app:srcCompat="@drawable/chart"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/chart" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -28,14 +28,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/guideline152"
         app:layout_constraintEnd_toStartOf="@+id/guideline149"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline150"
         app:layout_constraintVertical_bias="0.074"
-        app:srcCompat="@drawable/partnership"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/partnership" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -43,14 +43,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/guideline154"
         app:layout_constraintEnd_toStartOf="@+id/guideline149"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline152"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/eye"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/eye" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -58,14 +58,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/guideline156"
         app:layout_constraintEnd_toStartOf="@+id/guideline149"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline154"
         app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/diamond"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/diamond" />
 
     <TextView
         android:id="@+id/textView61"
@@ -73,14 +73,14 @@
         android:layout_height="0dp"
         android:text="@string/tv61"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
+        android:textSize="14sp"
+        app:autoSizeMaxTextSize="14sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline156"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline155"
@@ -92,14 +92,14 @@
         android:layout_height="0dp"
         android:text="@string/tv76"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
+        android:textSize="14sp"
+        app:autoSizeMaxTextSize="14sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline154"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline153"
@@ -111,14 +111,14 @@
         android:layout_height="0dp"
         android:text="@string/tv75"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
+        android:textSize="14sp"
+        app:autoSizeMaxTextSize="14sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline152"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline151"
@@ -130,14 +130,14 @@
         android:layout_height="0dp"
         android:text="@string/tv74"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:autoSizeMaxTextSize="18sp"
+        android:textSize="14sp"
+        app:autoSizeMaxTextSize="14sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline150"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline148"
@@ -147,8 +147,6 @@
         android:id="@+id/textView77"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="@string/tv77"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -158,7 +156,7 @@
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/guideline155"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline154" />
@@ -167,8 +165,6 @@
         android:id="@+id/textView80"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="@string/tv80"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -178,7 +174,7 @@
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/guideline153"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline152" />
@@ -187,7 +183,6 @@
         android:id="@+id/textView79"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/tv79"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -197,12 +192,11 @@
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/guideline151"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline150"
-        app:layout_constraintVertical_bias="0.642"
-        android:layout_marginRight="8dp" />
+        app:layout_constraintVertical_bias="0.642" />
 
     <TextView
         android:id="@+id/textView78"
@@ -217,7 +211,7 @@
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/guideline148"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline265"
         app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="@+id/guideline149"
         app:layout_constraintTop_toTopOf="@+id/guideline147" />
@@ -244,7 +238,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.26" />
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline265"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline150"

@@ -4,54 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CAD1F5"
+    android:background="#FEDBD0"
     tools:context=".Youthinreach">
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/guideline92"
         app:layout_constraintEnd_toStartOf="@+id/guideline91"
         app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline266"
         app:layout_constraintTop_toTopOf="@+id/guideline90"
         app:layout_constraintVertical_bias="0.013"
-        app:srcCompat="@drawable/img20181130wa0011"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/img20181130wa0011" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/guideline268"
+        app:layout_constraintEnd_toStartOf="@+id/guideline267"
         app:layout_constraintStart_toStartOf="@+id/guideline91"
         app:layout_constraintTop_toTopOf="@+id/guideline92"
-        app:srcCompat="@drawable/inreach"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/inreach" />
 
     <TextView
         android:id="@+id/textView68"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="@string/tv68"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:autoSizeMaxTextSize="20sp"
+        android:textSize="18sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline90"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline267"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline266"
         app:layout_constraintTop_toTopOf="@+id/guideline89"
         app:layout_constraintVertical_bias="0.127" />
 
@@ -59,18 +54,16 @@
         android:id="@+id/textView87"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
         android:text="@string/tv87"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:autoSizeMaxTextSize="20sp"
+        android:textSize="18sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline92"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline267"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@+id/guideline91"
         app:layout_constraintTop_toTopOf="@+id/guideline90"
@@ -80,19 +73,18 @@
         android:id="@+id/textView89"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
         android:text="@string/tv89"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:autoSizeMaxTextSize="20sp"
+        android:textSize="18sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="10sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline268"
         app:layout_constraintEnd_toStartOf="@+id/guideline91"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline266"
         app:layout_constraintTop_toTopOf="@+id/guideline92"
         app:layout_constraintVertical_bias="0.097" />
 
@@ -118,10 +110,31 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline266"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline267"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline92"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline268"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

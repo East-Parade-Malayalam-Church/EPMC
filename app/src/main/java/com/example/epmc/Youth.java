@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +22,6 @@ public class Youth extends AppCompatActivity {
         outreach = findViewById(R.id.button24);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youth);
-        Toast.makeText(this,"Click on Home Button for song List",Toast.LENGTH_LONG).show();
     }
     public void btym(View view)
     {
@@ -40,6 +38,11 @@ public class Youth extends AppCompatActivity {
         Intent i = new Intent(this,Youthoutreach.class);
         startActivity(i);
     }
+    public void btsong(View view)
+    {
+        Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emy-pwa.web.app/"));
+        startActivity(i3);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -48,8 +51,8 @@ public class Youth extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem items) {
         switch (items.getItemId()) {
             case R.id.context_home:
-                Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emy-pwa.web.app/"));
-                startActivity(i3);
+                Intent i2 = new Intent(getApplicationContext(), Home.class);
+                startActivity(i2);
                 return true;
             default:
                 return super.onOptionsItemSelected(items);

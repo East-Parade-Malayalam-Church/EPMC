@@ -9,14 +9,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Contactus extends AppCompatActivity {
-    private ImageButton imageCall;
-    ImageView iv32;
+    public ImageButton imageCall;
     ImageButton ib23;
     ImageButton ib24;
     ImageButton ib25;
@@ -61,7 +59,7 @@ public class Contactus extends AppCompatActivity {
     {
         Intent ie3 = new Intent(Intent.ACTION_SEND);
         ie3.setType("message/rfc822");
-        ie3.putExtra(Intent.EXTRA_EMAIL  , new String[]{""});
+        ie3.putExtra(Intent.EXTRA_EMAIL  , new String[]{"epmalayalam@gmail.com"});
         ie3.putExtra(Intent.EXTRA_SUBJECT, "Insert Subject here");
         ie3.putExtra(Intent.EXTRA_TEXT   , "To whomsover it may concern at East Parade Church, ");
         try {
