@@ -4,12 +4,12 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=75:A4:A4:58:13:F8:26:80:63:DC:5E:9F:F6:42:26:1F:E5:CB:5F:F9%3Bcom.example.epmc
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=75:A4:A4:58:13:F8:26:80:63:DC:5E:9F:F6:42:26:1F:E5:CB:5F:F9%3Bcom.church.epmc
 
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.example.epmc
+    com.church.epmc
 
     SHA-1 certificate fingerprint:
     75:A4:A4:58:13:F8:26:80:63:DC:5E:9F:F6:42:26:1F:E5:CB:5F:F9

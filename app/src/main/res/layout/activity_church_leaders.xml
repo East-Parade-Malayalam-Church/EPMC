@@ -137,28 +137,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.90" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.98" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -191,12 +191,12 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="csimodclicktext"
-        android:text="The Most Rev Thomas K Oommen, Moderator of Church of South India (CSI) was elected as the Moderator at the 35th Synod meeting in Kottayam, Kerala, India on 14th of January 2017."
+        android:text="The Bishop of South Kerala, A Dharmaraj Rasalam, has been elected as the new Moderator and Primate of the Church of South India. Bishop Rasalam succeeds Thomas Oommen, the Bishop of Madhya Kerala, who has served as Primate since 2017.He graduated from the University of Kerala, before further study at Leonard Theological College, Jabalpur and the United Theological College in Bangalore."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="12sp"
         android:visibility="invisible"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="14sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
@@ -213,10 +213,10 @@
         android:onClick="revnebuclicktext"
         android:text="Rev. Nebu Skariah is the Presbyter of the Malayalam congregation. He hails from Kumplampoika, near Pathanamthitta. He was ordained as a priest of the CSl Madhya Kerala Diocese in 2001. He completed his BD from Kerala United Theological Seminary, Trivandrum and M.Th in Christian Theology from Gurukul Lutheran Theological Seminary, Chennai."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
         android:visibility="invisible"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="14sp"
+        android:textSize="16sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
@@ -233,10 +233,10 @@
         android:onClick="revdarwinclicktext"
         android:text="Rev.Dn. Darvin V. Vadakethalackal of Madhya Kerala Diocese is our Asst.Presbyter. He is from Adoor, Pathanamthitta. He completed his B.Tech (EEE) from Carmel Engineering College Ranni and went on to do his B.D studies from Kerala United Theological Seminary, Kannammoola."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="12sp"
         android:visibility="invisible"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="14sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
@@ -253,10 +253,10 @@
         android:onClick="kcdbishclicktext"
         android:text="Rt. Rev. Dr. Prasana Kumar Samuel was consecrated and installed as Bishop of CSI in Karnataka Central Diocese on the 26th of March 2015."
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="12sp"
         android:visibility="invisible"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="14sp"
         app:autoSizeStepGranularity="1sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
